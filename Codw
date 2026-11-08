@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2563eb">
+<title>Reportes</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;background:#f3f4f6;color:#111827}
+header{background:#2563eb;color:#fff;padding:16px}
+h1{margin:0;font-size:1.3rem}
+main{max-width:600px;margin:0 auto;padding:16px}
+form{display:flex;flex-direction:column;gap:10px}
+input,textarea,select{padding:12px;font-size:1rem;border:1px solid #d1d5db;border-radius:8px;font-family:inherit}
+button{padding:12px;font-size:1rem;border:0;border-radius:8px;background:#2563eb;color:#fff}
+ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
+li{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+li h3{margin:0 0 4px;font-size:1rem}
+li p{margin:4px 0;white-space:pre-wrap}
+li small{color:#6b7280}
+.borrar{background:#dc2626;padding:6px 10px;font-size:.85rem;margin-top:6px}
+</style>
+</head>
+<body>
+<header><h1>📋 Reportes</h1></header>
+<main>
+  <form id="form">
+    <input id="titulo" placeholder="Título" required>
+    <textarea id="descripcion" placeholder="Descripción" rows="4" required></textarea>
+    <select id="prioridad">
+      <option>Baja</option>
+      <option selected>Media</option>
+      <option>Alta</option>
+    </select>
+    <button type="submit">Guardar reporte</button>
+  </form>
+  <h2>Mis reportes</h2>
+  <ul id="lista"></ul>
+</main>
+<script>
+const KEY='reportes';
+const lista=document.getElementById('lista');
+const form=document.getElementById('form');
+const cargar=()=>JSON.parse(localStorage.getItem(KEY)||'[]');
+const guardar=r=>localStorage.setItem(KEY,JSON.stringify(r));
+
+function mostrar(){
+  const rs=cargar();
+  lista.innerHTML='';
+  if(!rs.length){lista.innerHTML='<li>Aún no hay reportes</li>';return;}
+  rs.forEach(r=>{
+    const li=document.createElement('li');
+    const h=document.createElement('h3');h.textContent=r.titulo+' · '+r.prioridad;
+    const p=document.createElement('p');p.textContent=r.descripcion;
+    const s=document.createElement('small');s.textContent=new Date(r.fecha).toLocaleString('es-MX');
+    const b=document.createElement('button');b.className='borrar';b.textContent='Borrar';
+    b.onclick=()=>{guardar(cargar().filter(x=>x.id!==r.id));mostrar();};
+    li.append(h,p,s,document.createElement('br'),b);
+    lista.appendChild(li);
+  });
+}
+
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const rs=cargar();
+  rs.unshift({
+    id:Date.now(),
+    titulo:document.getElementById('titulo').value.trim(),
+    descripcion:document.getElementById('descripcion').value.trim(),
+    prioridad:document.getElementById('prioridad').value,
+    fecha:new Date().toISOString()
+  });
+  guardar(rs);form.reset();mostrar();
+});
+mostrar();
+</script>
+</body>
+</html>
