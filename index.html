@@ -61,5 +61,21 @@ function mostrar(){
     lista.appendChild(li);
   });
 }
+  form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const rs=cargar();
+  rs.unshift({
+    id:Date.now(),
+    titulo:document.getElementById('titulo').value.trim(),
+    descripcion:document.getElementById('descripcion').value.trim(),
+    prioridad:document.getElementById('prioridad').value,
+    fecha:new Date().toISOString()
+  });
+  guardar(rs);form.reset();mostrar();
+});
 
-form.addEve
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+mostrar();
+</script>
+</body>
+</html>
