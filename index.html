@@ -22,28 +22,28 @@ try{
   --accent:#2563eb;--link:#2563eb;
   --alto-bg:#fee2e2;--alto-fg:#991b1b;--medio-bg:#ffedd5;--medio-fg:#9a3412;
   color-scheme:light;
-  --glow:#ff4fa3;
+  --glow:#4a8dff;--head-bg:var(--accent);
   --bg-grad:none;--grain-op:0;
-  --bg-grad-dark:linear-gradient(180deg,#08080a 0%,#0e0d12 35%,#2a2230 58%,#6b3a62 78%,#c64a8c 92%,var(--glow) 100%);
+  --bg-grad-dark:linear-gradient(180deg,#08080a 0%,#0e0d12 35%,color-mix(in srgb,var(--glow) 14%,#120f16) 58%,color-mix(in srgb,var(--glow) 45%,#120f16) 78%,color-mix(in srgb,var(--glow) 80%,#120f16) 92%,var(--glow) 100%);
 }
 html[data-theme="oscuro"]{
   --bg:#0a0a0c;--card:#1a171f;--text:#ece9f1;--muted:#a8a1b3;--border:#2e2a36;
   --field:#100e14;--field-border:#463f52;--item:#14121a;--shadow:0 1px 3px rgba(0,0,0,.5);
   --alto-bg:#4c1d1d;--alto-fg:#fecaca;--medio-bg:#4a2a12;--medio-fg:#fed7aa;
-  color-scheme:dark;--bg-grad:var(--bg-grad-dark);--grain-op:.16;
+  color-scheme:dark;--bg-grad:var(--bg-grad-dark);--grain-op:.16;--head-bg:transparent;
 }
 @media (prefers-color-scheme:dark){
   html[data-theme="auto"]{
     --bg:#0a0a0c;--card:#1a171f;--text:#ece9f1;--muted:#a8a1b3;--border:#2e2a36;
     --field:#100e14;--field-border:#463f52;--item:#14121a;--shadow:0 1px 3px rgba(0,0,0,.5);
     --alto-bg:#4c1d1d;--alto-fg:#fecaca;--medio-bg:#4a2a12;--medio-fg:#fed7aa;
-    color-scheme:dark;--bg-grad:var(--bg-grad-dark);--grain-op:.16;
+    color-scheme:dark;--bg-grad:var(--bg-grad-dark);--grain-op:.16;--head-bg:transparent;
   }
 }
-html[data-accent="verde"]{--accent:#059669}
-html[data-accent="morado"]{--accent:#7c3aed}
-html[data-accent="naranja"]{--accent:#ea580c}
-html[data-accent="rosa"]{--accent:#db2777}
+html[data-accent="verde"]{--accent:#059669;--glow:#22d39a}
+html[data-accent="morado"]{--accent:#7c3aed;--glow:#9a5cff}
+html[data-accent="naranja"]{--accent:#ea580c;--glow:#ff7a2f}
+html[data-accent="rosa"]{--accent:#db2777;--glow:#ff4fa3}
 html[data-theme="oscuro"]{--link:color-mix(in srgb,var(--accent) 60%,white)}
 @media (prefers-color-scheme:dark){html[data-theme="auto"]{--link:color-mix(in srgb,var(--accent) 60%,white)}}
 html[data-size="grande"]{font-size:19px}
@@ -55,7 +55,7 @@ body{margin:0;font-family:system-ui,sans-serif;background:transparent;color:var(
 body::before,body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1}
 body::before{background:var(--bg-grad)}
 body::after{opacity:var(--grain-op);mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
-header{background:var(--accent);color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+header{background:var(--head-bg);color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
 h1{margin:0;font-size:1.3rem}
 #abrirConfig{background:transparent;padding:4px 8px;font-size:1.4rem;line-height:1}
 main{max-width:600px;margin:0 auto;padding:16px}
@@ -151,12 +151,17 @@ const COLORES={azul:'#2563eb',verde:'#059669',morado:'#7c3aed',naranja:'#ea580c'
 let cfg=Object.assign({},DEF);
 try{Object.assign(cfg,JSON.parse(localStorage.getItem(CFG_KEY)||'{}'));}catch(e){}
 function guardarCfg(){try{localStorage.setItem(CFG_KEY,JSON.stringify(cfg));}catch(e){}}
+function esOscuro(){
+  return cfg.tema==='oscuro'||(cfg.tema==='auto'&&!!window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);
+}
 function aplicar(){
   const h=document.documentElement;
   h.dataset.theme=cfg.tema;h.dataset.accent=cfg.color;h.dataset.size=cfg.tam;
   const m=document.querySelector('meta[name="theme-color"]');
-  if(m) m.content=COLORES[cfg.color]||COLORES.azul;
+  /* en oscuro el encabezado es negro, así que la barra de estado también */
+  if(m) m.content=esOscuro()?'#08080a':(COLORES[cfg.color]||COLORES.azul);
 }
+try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',aplicar);}catch(e){}
 const OPCIONES={
   tema:[['auto','Automático'],['claro','Claro'],['oscuro','Oscuro']],
   color:Object.keys(COLORES).map(k=>[k,k[0].toUpperCase()+k.slice(1)]),
