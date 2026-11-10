@@ -21,11 +21,22 @@ li h3{margin:0 0 4px;font-size:1rem}
 li p{margin:4px 0;white-space:pre-wrap}
 li small{color:#6b7280}
 .borrar{background:#dc2626;padding:6px 10px;font-size:.85rem;margin-top:6px}
+#auto{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.1);border-left:4px solid #2563eb;margin-bottom:16px}
+#auto h3{margin:0 0 4px;font-size:1.05rem}
+#auto p{margin:6px 0;white-space:pre-wrap}
+#auto small{color:#6b7280}
+#auto dl{margin:8px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:.9rem}
+#auto dt{color:#6b7280}
+#auto dd{margin:0}
+#recargar{padding:6px 10px;font-size:.85rem;margin-top:8px}
 </style>
 </head>
 <body>
 <header><h1>📋 Reportes</h1></header>
 <main>
+  <h2>Reporte automático</h2>
+  <section id="auto">Cargando…</section>
+
   <form id="form">
     <input id="titulo" placeholder="Título" required>
     <textarea id="descripcion" placeholder="Descripción" rows="4" required></textarea>
@@ -43,8 +54,48 @@ li small{color:#6b7280}
 const KEY='reportes';
 const lista=document.getElementById('lista');
 const form=document.getElementById('form');
+const auto=document.getElementById('auto');
 const cargar=()=>JSON.parse(localStorage.getItem(KEY)||'[]');
 const guardar=r=>localStorage.setItem(KEY,JSON.stringify(r));
+
+function fmtFecha(f){
+  const d=new Date(f);
+  return isNaN(d)?String(f):d.toLocaleString('es-MX');
+}
+
+async function cargarAuto(){
+  auto.textContent='Cargando…';
+  try{
+    const res=await fetch('reporte.json?t='+Date.now(),{cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const r=await res.json();
+    auto.innerHTML='';
+    const h=document.createElement('h3');h.textContent=r.titulo||'Reporte';
+    auto.appendChild(h);
+    if(r.fecha){
+      const s=document.createElement('small');s.textContent=fmtFecha(r.fecha);
+      auto.appendChild(s);
+    }
+    if(r.descripcion){
+      const p=document.createElement('p');p.textContent=r.descripcion;
+      auto.appendChild(p);
+    }
+    const dl=document.createElement('dl');
+    Object.entries(r).forEach(([k,v])=>{
+      if(['titulo','fecha','descripcion'].includes(k)) return;
+      const dt=document.createElement('dt');dt.textContent=k;
+      const dd=document.createElement('dd');
+      dd.textContent=(v&&typeof v==='object')?Object.values(v).join(', '):String(v);
+      dl.append(dt,dd);
+    });
+    if(dl.children.length) auto.appendChild(dl);
+  }catch(err){
+    auto.textContent='No se pudo cargar el reporte ('+err.message+')';
+  }
+  const b=document.createElement('button');
+  b.id='recargar';b.textContent='Actualizar';b.onclick=cargarAuto;
+  auto.appendChild(b);
+}
 
 function mostrar(){
   const rs=cargar();
@@ -61,7 +112,7 @@ function mostrar(){
     lista.appendChild(li);
   });
 }
-  form.addEventListener('submit',e=>{
+form.addEventListener('submit',e=>{
   e.preventDefault();
   const rs=cargar();
   rs.unshift({
@@ -76,6 +127,7 @@ function mostrar(){
 
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
 mostrar();
+cargarAuto();
 </script>
 </body>
 </html>
