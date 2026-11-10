@@ -26,9 +26,9 @@ li small{color:#6b7280}
 #auto p{margin:6px 0;white-space:pre-wrap;line-height:1.4}
 #auto small{color:#6b7280}
 #auto .resumen{font-weight:600}
-#auto dl{margin:6px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:.9rem}
-#auto dt{color:#6b7280}
-#auto dd{margin:0}
+#auto dl{margin:6px 0 0;font-size:.92rem}
+#auto dt{color:#6b7280;font-size:.8rem;margin-top:8px}
+#auto dd{margin:2px 0 0;line-height:1.35}
 #auto details{border-top:1px solid #e5e7eb;margin-top:10px;padding-top:8px}
 #auto summary{font-weight:600;cursor:pointer;padding:4px 0}
 #auto .item{background:#f9fafb;border-radius:8px;padding:8px;margin:6px 0;font-size:.92rem}
@@ -126,13 +126,16 @@ function dibujarCompleto(r){
     const s=sec('Eventos del USD (impacto medio y alto)',true);
     arr(r.eventos_usd).forEach(ev=>{
       const it=el('div',null,'item');
+      const nada=x=>!x||String(x).trim()==='-';
       const b=el('b');
-      if(ev.bloque) b.appendChild(el('span',ev.bloque,'tag'));
-      if(ev.impacto) b.appendChild(el('span',ev.impacto,'tag '+claseImpacto(ev.impacto)));
-      b.appendChild(document.createTextNode((ev.hora?ev.hora+' · ':'')+(ev.evento||'')));
+      if(!nada(ev.bloque)) b.appendChild(el('span',ev.bloque,'tag'));
+      if(!nada(ev.impacto)) b.appendChild(el('span',ev.impacto,'tag '+claseImpacto(ev.impacto)));
+      b.appendChild(document.createTextNode((!nada(ev.hora)?ev.hora+' · ':'')+(ev.evento||'')));
       it.appendChild(b);
-      const det=['Anterior: '+(ev.anterior||'—'),'Pronóstico: '+(ev.pronostico||'—'),'Real: '+(ev.real||'—')].join(' · ');
-      it.appendChild(el('small',det));
+      if(!nada(ev.anterior)||!nada(ev.pronostico)||!nada(ev.real)){
+        const det=['Anterior: '+(ev.anterior||'—'),'Pronóstico: '+(ev.pronostico||'—'),'Real: '+(ev.real||'—')].join(' · ');
+        it.appendChild(el('small',det));
+      }
       s.appendChild(it);
     });
     if(r.nota_eventos) s.appendChild(el('p',r.nota_eventos));
