@@ -99,6 +99,14 @@ li small{color:var(--muted)}
 #auto a{color:var(--link)}
 #auto .aviso{color:var(--muted);font-size:.8rem}
 #recargar{padding:6px 10px;font-size:.85rem;margin-top:10px}
+
+/* mapa de niveles */
+#mapa{background:var(--card);border-radius:10px;padding:12px;box-shadow:var(--shadow);margin-bottom:16px;overflow-wrap:anywhere}
+#mapa h3{margin:0 0 4px;font-size:1.05rem}
+#mapa small{color:var(--muted)}
+#mapa svg{width:100%;height:auto;display:block;margin:8px 0}
+#mapa p{margin:6px 0;line-height:1.4;font-size:.92rem}
+#mapa .nota{color:var(--muted);font-size:.8rem}
 </style>
 </head>
 <body>
@@ -122,6 +130,9 @@ li small{color:var(--muted)}
 
   <h2>Reporte automático</h2>
   <section id="auto">Cargando…</section>
+
+  <h2 id="mapaTitulo" hidden>Mapa de niveles</h2>
+  <section id="mapa" hidden></section>
 
   <form id="form">
     <input id="titulo" placeholder="Título" required>
@@ -336,6 +347,83 @@ function dibujarSimple(r){
   if(dl.children.length) auto.appendChild(dl);
 }
 
+/* ---------- mapa de niveles (se dibuja con el campo "mapa" del reporte) ---------- */
+function pintarMapa(){
+  const cont=document.getElementById('mapa'),tit=document.getElementById('mapaTitulo');
+  cont.innerHTML='';
+  const m=ultimoReporte&&ultimoReporte.mapa;
+  const niv=arr(m&&m.niveles).filter(n=>isFinite(parseFloat(n.valor)));
+  if(!m||!niv.length){cont.hidden=true;tit.hidden=true;return;}
+  cont.hidden=false;tit.hidden=false;
+  const NS='http://www.w3.org/2000/svg';
+  const fmt=n=>Number(n).toFixed(2).replace('.',',');
+  const items=niv.map(n=>({v:+n.valor,v2:n.valor2!=null?+n.valor2:null,t:String(n.etiqueta||fmt(n.valor)),precio:false}));
+  const pr=m.precio&&isFinite(parseFloat(m.precio.valor))?+m.precio.valor:null;
+  if(pr!=null) items.push({v:pr,v2:null,t:String(m.precio.etiqueta||fmt(pr)),precio:true});
+  const flechas=arr(m.flechas).filter(f=>pr!=null&&isFinite(parseFloat(f.hasta)));
+  const todos=[];
+  items.forEach(i=>{todos.push(i.v);if(i.v2!=null)todos.push(i.v2);});
+  flechas.forEach(f=>todos.push(+f.hasta));
+  let max=Math.max(...todos),min=Math.min(...todos);
+  const pad=(max-min)*0.06||0.1;max+=pad;min-=pad;
+  const W=360,top=16,H=320,x0=8,x1=128,xl=138;
+  const y=v=>top+(max-v)/(max-min)*(H-top-16);
+  const mk=(tag,at,st)=>{
+    const e=document.createElementNS(NS,tag);
+    Object.keys(at||{}).forEach(k=>e.setAttribute(k,at[k]));
+    if(st) Object.assign(e.style,st);
+    return e;
+  };
+  const lab=items.map(i=>({i,y:y(i.v2!=null?(i.v+i.v2)/2:i.v)})).sort((a,b)=>a.y-b.y);
+  for(let k=1;k<lab.length;k++) if(lab[k].y<lab[k-1].y+15) lab[k].y=lab[k-1].y+15;
+  const alto=Math.ceil(Math.max(H,lab[lab.length-1].y+20));
+  const svg=mk('svg',{viewBox:'0 0 '+W+' '+alto,role:'img'});
+  svg.appendChild(mk('title')).textContent=m.titulo||'Mapa de niveles';
+  /* zonas primero, para que queden detrás */
+  items.forEach(i=>{
+    if(i.v2!=null){
+      const a=y(Math.max(i.v,i.v2)),b=y(Math.min(i.v,i.v2));
+      svg.appendChild(mk('rect',{x:x0,y:a,width:x1-x0,height:Math.max(2,b-a),rx:3},{fill:'var(--link)',opacity:'.28'}));
+    }
+  });
+  items.forEach(i=>{
+    if(i.v2!=null||i.precio) return;
+    svg.appendChild(mk('line',{x1:x0,y1:y(i.v),x2:x1,y2:y(i.v),'stroke-width':'1','stroke-dasharray':'4 4'},{stroke:'var(--muted)'}));
+  });
+  if(pr!=null){
+    svg.appendChild(mk('line',{x1:x0,y1:y(pr),x2:x1,y2:y(pr),'stroke-width':'2'},{stroke:'var(--link)'}));
+    svg.appendChild(mk('circle',{cx:x0,cy:y(pr),r:4},{fill:'var(--link)'}));
+  }
+  /* flechas con punta dibujada a mano */
+  flechas.forEach(f=>{
+    const arriba=f.dir==='arriba',x=arriba?40:90,col=arriba?'#d97706':'#0d9488';
+    const ya=y(pr)+(arriba?-7:7),yb=y(+f.hasta)+(arriba?3:-3),s=arriba?1:-1;
+    svg.appendChild(mk('line',{x1:x,y1:ya,x2:x,y2:yb+s*6,'stroke-width':'2.5','stroke-linecap':'round'},{stroke:col}));
+    svg.appendChild(mk('polygon',{points:(x-5)+','+(yb+s*7)+' '+(x+5)+','+(yb+s*7)+' '+x+','+yb},{fill:col}));
+  });
+  /* etiquetas a la derecha, con línea guía si se corrieron */
+  lab.forEach(l=>{
+    const yy=y(l.i.v2!=null?(l.i.v+l.i.v2)/2:l.i.v);
+    if(Math.abs(yy-l.y)>1){
+      svg.appendChild(mk('polyline',{points:x1+','+yy+' '+(x1+5)+','+yy+' '+(xl-4)+','+l.y,fill:'none','stroke-width':'.7'},{stroke:'var(--muted)'}));
+    }
+    const t=mk('text',{x:xl,y:l.y,'dominant-baseline':'central'},{fill:l.i.precio?'var(--link)':'var(--text)',fontSize:'12px',fontWeight:l.i.precio?'700':'400'});
+    t.textContent=l.i.t;
+    svg.appendChild(t);
+  });
+  cont.appendChild(el('h3',m.titulo||'Mapa de niveles'));
+  if(m.actualizado) cont.appendChild(el('small',m.actualizado));
+  cont.appendChild(svg);
+  flechas.forEach(f=>{
+    const p=el('p');
+    const marca=el('b',f.dir==='arriba'?'▲ ':'▼ ');
+    marca.style.color=f.dir==='arriba'?'#d97706':'#0d9488';
+    p.append(marca,document.createTextNode(String(f.texto||'')));
+    cont.appendChild(p);
+  });
+  if(m.nota) cont.appendChild(el('p',m.nota,'nota'));
+}
+
 /* ---------- carga y pintado del reporte ---------- */
 let ultimoReporte=null,ultimoError=null;
 function pintarReporte(){
@@ -350,6 +438,7 @@ function pintarReporte(){
   const b=document.createElement('button');
   b.id='recargar';b.textContent='Actualizar';b.onclick=cargarAuto;
   auto.appendChild(b);
+  try{pintarMapa();}catch(e){document.getElementById('mapa').hidden=true;document.getElementById('mapaTitulo').hidden=true;}
 }
 async function cargarAuto(){
   auto.textContent='Cargando…';
