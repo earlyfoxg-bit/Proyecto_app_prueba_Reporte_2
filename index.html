@@ -1,49 +1,117 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="auto" data-accent="azul" data-size="normal">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#2563eb">
 <title>Reportes</title>
 <link rel="manifest" href="manifest.json">
+<script>
+/* Aplica la configuración guardada antes de pintar, para que no parpadee */
+try{
+  var c=JSON.parse(localStorage.getItem('config')||'{}'),h=document.documentElement;
+  if(c.tema)h.dataset.theme=c.tema;
+  if(c.color)h.dataset.accent=c.color;
+  if(c.tam)h.dataset.size=c.tam;
+}catch(e){}
+</script>
 <style>
+:root{
+  --bg:#f3f4f6;--card:#fff;--text:#111827;--muted:#6b7280;--border:#e5e7eb;
+  --field:#fff;--field-border:#d1d5db;--item:#f9fafb;--shadow:0 1px 3px rgba(0,0,0,.1);
+  --accent:#2563eb;--link:#2563eb;
+  --alto-bg:#fee2e2;--alto-fg:#991b1b;--medio-bg:#ffedd5;--medio-fg:#9a3412;
+  color-scheme:light;
+}
+html[data-theme="oscuro"]{
+  --bg:#0f172a;--card:#1e293b;--text:#e5e7eb;--muted:#94a3b8;--border:#334155;
+  --field:#0f172a;--field-border:#475569;--item:#172033;--shadow:0 1px 3px rgba(0,0,0,.5);
+  --alto-bg:#4c1d1d;--alto-fg:#fecaca;--medio-bg:#4a2a12;--medio-fg:#fed7aa;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:dark){
+  html[data-theme="auto"]{
+    --bg:#0f172a;--card:#1e293b;--text:#e5e7eb;--muted:#94a3b8;--border:#334155;
+    --field:#0f172a;--field-border:#475569;--item:#172033;--shadow:0 1px 3px rgba(0,0,0,.5);
+    --alto-bg:#4c1d1d;--alto-fg:#fecaca;--medio-bg:#4a2a12;--medio-fg:#fed7aa;
+    color-scheme:dark;
+  }
+}
+html[data-accent="verde"]{--accent:#059669}
+html[data-accent="morado"]{--accent:#7c3aed}
+html[data-accent="naranja"]{--accent:#ea580c}
+html[data-accent="rosa"]{--accent:#db2777}
+html[data-theme="oscuro"]{--link:color-mix(in srgb,var(--accent) 60%,white)}
+@media (prefers-color-scheme:dark){html[data-theme="auto"]{--link:color-mix(in srgb,var(--accent) 60%,white)}}
+html[data-size="grande"]{font-size:19px}
+
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,sans-serif;background:#f3f4f6;color:#111827}
-header{background:#2563eb;color:#fff;padding:16px}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--accent);color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
 h1{margin:0;font-size:1.3rem}
+#abrirConfig{background:transparent;padding:4px 8px;font-size:1.4rem;line-height:1}
 main{max-width:600px;margin:0 auto;padding:16px}
 form{display:flex;flex-direction:column;gap:10px}
-input,textarea,select{padding:12px;font-size:1rem;border:1px solid #d1d5db;border-radius:8px;font-family:inherit}
-button{padding:12px;font-size:1rem;border:0;border-radius:8px;background:#2563eb;color:#fff}
+input,textarea,select{padding:12px;font-size:1rem;border:1px solid var(--field-border);border-radius:8px;font-family:inherit;background:var(--field);color:var(--text)}
+button{padding:12px;font-size:1rem;border:0;border-radius:8px;background:var(--accent);color:#fff}
 ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
-li{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+li{background:var(--card);border-radius:10px;padding:12px;box-shadow:var(--shadow)}
 li h3{margin:0 0 4px;font-size:1rem}
 li p{margin:4px 0;white-space:pre-wrap}
-li small{color:#6b7280}
+li small{color:var(--muted)}
 .borrar{background:#dc2626;padding:6px 10px;font-size:.85rem;margin-top:6px}
-#auto{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.1);border-left:4px solid #2563eb;margin-bottom:16px;overflow-wrap:anywhere}
+
+/* configuración */
+#config{background:var(--card);border-radius:10px;padding:12px;box-shadow:var(--shadow);margin-bottom:16px}
+#config h2{margin:0 0 8px;font-size:1.05rem}
+#config h4{margin:12px 0 6px;font-size:.85rem;color:var(--muted);font-weight:600}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{background:var(--item);color:var(--text);border:1px solid var(--border);padding:8px 12px;font-size:.9rem}
+.opt.sel{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sw{width:38px;height:38px;border-radius:50%;padding:0;border:3px solid transparent}
+.sw.sel{border-color:var(--text)}
+#restablecer{background:transparent;color:var(--muted);border:1px solid var(--border);margin-top:14px;padding:8px 12px;font-size:.85rem}
+
+/* reporte automático */
+#auto{background:var(--card);border-radius:10px;padding:12px;box-shadow:var(--shadow);border-left:4px solid var(--accent);margin-bottom:16px;overflow-wrap:anywhere}
 #auto h3{margin:0 0 4px;font-size:1.05rem}
 #auto p{margin:6px 0;white-space:pre-wrap;line-height:1.4}
-#auto small{color:#6b7280}
+#auto small{color:var(--muted)}
 #auto .resumen{font-weight:600}
 #auto dl{margin:6px 0 0;font-size:.92rem}
-#auto dt{color:#6b7280;font-size:.8rem;margin-top:8px}
+#auto dt{color:var(--muted);font-size:.8rem;margin-top:8px}
 #auto dd{margin:2px 0 0;line-height:1.35}
-#auto details{border-top:1px solid #e5e7eb;margin-top:10px;padding-top:8px}
+#auto details{border-top:1px solid var(--border);margin-top:10px;padding-top:8px}
 #auto summary{font-weight:600;cursor:pointer;padding:4px 0}
-#auto .item{background:#f9fafb;border-radius:8px;padding:8px;margin:6px 0;font-size:.92rem}
+#auto .item{background:var(--item);border-radius:8px;padding:8px;margin:6px 0;font-size:.92rem}
 #auto .item b{display:block}
-#auto .tag{display:inline-block;font-size:.75rem;padding:1px 6px;border-radius:6px;background:#dbeafe;color:#1e40af;margin-right:4px}
-#auto .alto{background:#fee2e2;color:#991b1b}
-#auto .medio{background:#ffedd5;color:#9a3412}
-#auto a{color:#2563eb}
-#auto .aviso{color:#6b7280;font-size:.8rem}
+#auto .tag{display:inline-block;font-size:.75rem;padding:1px 6px;border-radius:6px;background:color-mix(in srgb,var(--accent) 18%,var(--card));color:var(--link);margin-right:4px}
+#auto .alto{background:var(--alto-bg);color:var(--alto-fg)}
+#auto .medio{background:var(--medio-bg);color:var(--medio-fg)}
+#auto a{color:var(--link)}
+#auto .aviso{color:var(--muted);font-size:.8rem}
 #recargar{padding:6px 10px;font-size:.85rem;margin-top:10px}
 </style>
 </head>
 <body>
-<header><h1>📋 Reportes</h1></header>
+<header>
+  <h1>📋 Reportes</h1>
+  <button id="abrirConfig" type="button" aria-label="Configuración" aria-expanded="false">⚙️</button>
+</header>
 <main>
+  <section id="config" hidden>
+    <h2>Configuración</h2>
+    <h4>Tema</h4>
+    <div class="opts" id="o-tema"></div>
+    <h4>Color</h4>
+    <div class="opts" id="o-color"></div>
+    <h4>Tamaño del texto</h4>
+    <div class="opts" id="o-tam"></div>
+    <h4>Secciones del reporte</h4>
+    <div class="opts" id="o-secciones"></div>
+    <button id="restablecer" type="button">Restablecer</button>
+  </section>
+
   <h2>Reporte automático</h2>
   <section id="auto">Cargando…</section>
 
@@ -68,6 +136,60 @@ const auto=document.getElementById('auto');
 const cargar=()=>JSON.parse(localStorage.getItem(KEY)||'[]');
 const guardar=r=>localStorage.setItem(KEY,JSON.stringify(r));
 
+/* ---------- configuración ---------- */
+const CFG_KEY='config';
+const DEF={tema:'auto',color:'azul',tam:'normal',secciones:'principales'};
+const COLORES={azul:'#2563eb',verde:'#059669',morado:'#7c3aed',naranja:'#ea580c',rosa:'#db2777'};
+let cfg=Object.assign({},DEF);
+try{Object.assign(cfg,JSON.parse(localStorage.getItem(CFG_KEY)||'{}'));}catch(e){}
+function guardarCfg(){try{localStorage.setItem(CFG_KEY,JSON.stringify(cfg));}catch(e){}}
+function aplicar(){
+  const h=document.documentElement;
+  h.dataset.theme=cfg.tema;h.dataset.accent=cfg.color;h.dataset.size=cfg.tam;
+  const m=document.querySelector('meta[name="theme-color"]');
+  if(m) m.content=COLORES[cfg.color]||COLORES.azul;
+}
+const OPCIONES={
+  tema:[['auto','Automático'],['claro','Claro'],['oscuro','Oscuro']],
+  color:Object.keys(COLORES).map(k=>[k,k[0].toUpperCase()+k.slice(1)]),
+  tam:[['normal','Normal'],['grande','Grande']],
+  secciones:[['principales','Principales abiertas'],['todas','Todas abiertas'],['ninguna','Todas cerradas']]
+};
+function dibujarConfig(){
+  Object.keys(OPCIONES).forEach(clave=>{
+    const cont=document.getElementById('o-'+clave);
+    cont.innerHTML='';
+    OPCIONES[clave].forEach(([valor,texto])=>{
+      const b=document.createElement('button');
+      b.type='button';
+      const sel=cfg[clave]===valor;
+      if(clave==='color'){
+        b.className='sw'+(sel?' sel':'');
+        b.style.background=COLORES[valor];
+        b.title=texto;b.setAttribute('aria-label',texto);
+      }else{
+        b.className='opt'+(sel?' sel':'');
+        b.textContent=texto;
+      }
+      b.setAttribute('aria-pressed',sel?'true':'false');
+      b.onclick=()=>{
+        cfg[clave]=valor;guardarCfg();aplicar();dibujarConfig();
+        if(clave==='secciones') pintarReporte();
+      };
+      cont.appendChild(b);
+    });
+  });
+}
+const panel=document.getElementById('config');
+const btnConfig=document.getElementById('abrirConfig');
+btnConfig.onclick=()=>{
+  panel.hidden=!panel.hidden;
+  btnConfig.setAttribute('aria-expanded',String(!panel.hidden));
+};
+document.getElementById('restablecer').onclick=()=>{
+  cfg=Object.assign({},DEF);guardarCfg();aplicar();dibujarConfig();pintarReporte();
+};
+
 function fmtFecha(f){
   const s=String(f);
   const m=s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -84,9 +206,9 @@ function el(tag,text,cls){
   return e;
 }
 const arr=x=>Array.isArray(x)?x:[];
-function sec(titulo,abierta){
+function sec(titulo,principal){
   const d=document.createElement('details');
-  if(abierta) d.open=true;
+  d.open=cfg.secciones==='todas'?true:(cfg.secciones==='ninguna'?false:!!principal);
   d.appendChild(el('summary',titulo));
   return d;
 }
@@ -201,20 +323,31 @@ function dibujarSimple(r){
   if(dl.children.length) auto.appendChild(dl);
 }
 
+/* ---------- carga y pintado del reporte ---------- */
+let ultimoReporte=null,ultimoError=null;
+function pintarReporte(){
+  auto.innerHTML='';
+  if(ultimoError){
+    auto.textContent='No se pudo cargar el reporte ('+ultimoError+')';
+  }else if(ultimoReporte){
+    if(esReporteCompleto(ultimoReporte)) dibujarCompleto(ultimoReporte); else dibujarSimple(ultimoReporte);
+  }else{
+    auto.textContent='Cargando…';
+  }
+  const b=document.createElement('button');
+  b.id='recargar';b.textContent='Actualizar';b.onclick=cargarAuto;
+  auto.appendChild(b);
+}
 async function cargarAuto(){
   auto.textContent='Cargando…';
   try{
     const res=await fetch('reporte.json?t='+Date.now(),{cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
-    const r=await res.json();
-    auto.innerHTML='';
-    if(esReporteCompleto(r)) dibujarCompleto(r); else dibujarSimple(r);
+    ultimoReporte=await res.json();ultimoError=null;
   }catch(err){
-    auto.textContent='No se pudo cargar el reporte ('+err.message+')';
+    ultimoError=err.message;
   }
-  const b=document.createElement('button');
-  b.id='recargar';b.textContent='Actualizar';b.onclick=cargarAuto;
-  auto.appendChild(b);
+  pintarReporte();
 }
 
 function mostrar(){
@@ -246,6 +379,8 @@ form.addEventListener('submit',e=>{
 });
 
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+aplicar();
+dibujarConfig();
 mostrar();
 cargarAuto();
 </script>
