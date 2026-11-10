@@ -21,14 +21,24 @@ li h3{margin:0 0 4px;font-size:1rem}
 li p{margin:4px 0;white-space:pre-wrap}
 li small{color:#6b7280}
 .borrar{background:#dc2626;padding:6px 10px;font-size:.85rem;margin-top:6px}
-#auto{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.1);border-left:4px solid #2563eb;margin-bottom:16px}
+#auto{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.1);border-left:4px solid #2563eb;margin-bottom:16px;overflow-wrap:anywhere}
 #auto h3{margin:0 0 4px;font-size:1.05rem}
-#auto p{margin:6px 0;white-space:pre-wrap}
+#auto p{margin:6px 0;white-space:pre-wrap;line-height:1.4}
 #auto small{color:#6b7280}
-#auto dl{margin:8px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:.9rem}
+#auto .resumen{font-weight:600}
+#auto dl{margin:6px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:.9rem}
 #auto dt{color:#6b7280}
 #auto dd{margin:0}
-#recargar{padding:6px 10px;font-size:.85rem;margin-top:8px}
+#auto details{border-top:1px solid #e5e7eb;margin-top:10px;padding-top:8px}
+#auto summary{font-weight:600;cursor:pointer;padding:4px 0}
+#auto .item{background:#f9fafb;border-radius:8px;padding:8px;margin:6px 0;font-size:.92rem}
+#auto .item b{display:block}
+#auto .tag{display:inline-block;font-size:.75rem;padding:1px 6px;border-radius:6px;background:#dbeafe;color:#1e40af;margin-right:4px}
+#auto .alto{background:#fee2e2;color:#991b1b}
+#auto .medio{background:#ffedd5;color:#9a3412}
+#auto a{color:#2563eb}
+#auto .aviso{color:#6b7280;font-size:.8rem}
+#recargar{padding:6px 10px;font-size:.85rem;margin-top:10px}
 </style>
 </head>
 <body>
@@ -59,8 +69,133 @@ const cargar=()=>JSON.parse(localStorage.getItem(KEY)||'[]');
 const guardar=r=>localStorage.setItem(KEY,JSON.stringify(r));
 
 function fmtFecha(f){
-  const d=new Date(f);
-  return isNaN(d)?String(f):d.toLocaleString('es-MX');
+  const s=String(f);
+  const m=s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if(m) return m[3]+'/'+m[2]+'/'+m[1];
+  const d=new Date(s);
+  return isNaN(d)?s:d.toLocaleString('es-MX');
+}
+
+/* ---------- ayudas para dibujar ---------- */
+function el(tag,text,cls){
+  const e=document.createElement(tag);
+  if(text!=null) e.textContent=String(text);
+  if(cls) e.className=cls;
+  return e;
+}
+const arr=x=>Array.isArray(x)?x:[];
+function sec(titulo,abierta){
+  const d=document.createElement('details');
+  if(abierta) d.open=true;
+  d.appendChild(el('summary',titulo));
+  return d;
+}
+function kv(items){
+  const dl=document.createElement('dl');
+  items.forEach(i=>{dl.append(el('dt',i.concepto),el('dd',i.valor));});
+  return dl;
+}
+function claseImpacto(t){
+  const s=String(t||'').toLowerCase();
+  return s.includes('alt')?'alto':(s.includes('med')?'medio':'');
+}
+
+/* ---------- reporte diario completo (DXY y MNQ) ---------- */
+function esReporteCompleto(r){
+  return r&&typeof r==='object'&&(r.dxy||r.nasdaq||r.eventos_usd||r.escenarios);
+}
+function dibujarCompleto(r){
+  auto.appendChild(el('h3',r.titulo||'Reporte'));
+  const meta=[r.fecha&&fmtFecha(r.fecha),r.generado].filter(Boolean).join(' · ');
+  if(meta) auto.appendChild(el('small',meta));
+  if(r.resumen) auto.appendChild(el('p',r.resumen,'resumen'));
+
+  if(r.dxy){
+    const s=sec('Dólar (DXY)',true);
+    if(r.dxy.texto) s.appendChild(el('p',r.dxy.texto));
+    if(arr(r.dxy.datos).length) s.appendChild(kv(arr(r.dxy.datos)));
+    auto.appendChild(s);
+  }
+  if(r.noticias){
+    const s=sec('Noticias',false);
+    if(r.noticias.ayer){s.appendChild(el('b','Ayer'));s.appendChild(el('p',r.noticias.ayer));}
+    if(r.noticias.hoy){s.appendChild(el('b','Hoy'));s.appendChild(el('p',r.noticias.hoy));}
+    auto.appendChild(s);
+  }
+  if(arr(r.eventos_usd).length||r.nota_eventos){
+    const s=sec('Eventos del USD (impacto medio y alto)',true);
+    arr(r.eventos_usd).forEach(ev=>{
+      const it=el('div',null,'item');
+      const b=el('b');
+      if(ev.bloque) b.appendChild(el('span',ev.bloque,'tag'));
+      if(ev.impacto) b.appendChild(el('span',ev.impacto,'tag '+claseImpacto(ev.impacto)));
+      b.appendChild(document.createTextNode((ev.hora?ev.hora+' · ':'')+(ev.evento||'')));
+      it.appendChild(b);
+      const det=['Anterior: '+(ev.anterior||'—'),'Pronóstico: '+(ev.pronostico||'—'),'Real: '+(ev.real||'—')].join(' · ');
+      it.appendChild(el('small',det));
+      s.appendChild(it);
+    });
+    if(r.nota_eventos) s.appendChild(el('p',r.nota_eventos));
+    auto.appendChild(s);
+  }
+  if(r.nasdaq){
+    const s=sec('Nasdaq y MNQ',true);
+    if(r.nasdaq.texto) s.appendChild(el('p',r.nasdaq.texto));
+    arr(r.nasdaq.puntos).forEach(p=>s.appendChild(el('p','• '+p)));
+    auto.appendChild(s);
+  }
+  if(arr(r.niveles).length){
+    const s=sec('Niveles de mercado',true);
+    s.appendChild(kv(arr(r.niveles)));
+    auto.appendChild(s);
+  }
+  if(arr(r.escenarios).length){
+    const s=sec('Escenarios para Nueva York',true);
+    arr(r.escenarios).forEach(e=>{
+      const it=el('div',null,'item');
+      it.appendChild(el('b',e.tipo));
+      it.appendChild(el('span',e.texto));
+      s.appendChild(it);
+    });
+    auto.appendChild(s);
+  }
+  if(arr(r.agenda).length){
+    const s=sec('Agenda del día',false);
+    s.appendChild(kv(arr(r.agenda).map(a=>({concepto:a.hora,valor:a.evento}))));
+    auto.appendChild(s);
+  }
+  if(r.conclusion){
+    const s=sec('Conclusión',true);
+    s.appendChild(el('p',r.conclusion));
+    auto.appendChild(s);
+  }
+  if(arr(r.fuentes).length){
+    const s=sec('Fuentes',false);
+    arr(r.fuentes).forEach(f=>{
+      const p=el('p');
+      if(f.url&&/^https:\/\//.test(f.url)){
+        const a=el('a',f.titulo||f.url);
+        a.href=f.url;a.target='_blank';a.rel='noopener noreferrer';
+        p.appendChild(a);
+      }else p.textContent=f.titulo||'';
+      s.appendChild(p);
+    });
+    auto.appendChild(s);
+  }
+  if(r.aviso) auto.appendChild(el('p',r.aviso,'aviso'));
+}
+
+/* ---------- cualquier otro reporte (formato simple) ---------- */
+function dibujarSimple(r){
+  auto.appendChild(el('h3',r.titulo||'Reporte'));
+  if(r.fecha) auto.appendChild(el('small',fmtFecha(r.fecha)));
+  if(r.descripcion) auto.appendChild(el('p',r.descripcion));
+  const dl=document.createElement('dl');
+  Object.entries(r).forEach(([k,v])=>{
+    if(['titulo','fecha','descripcion'].includes(k)) return;
+    dl.append(el('dt',k),el('dd',(v&&typeof v==='object')?Object.values(v).join(', '):String(v)));
+  });
+  if(dl.children.length) auto.appendChild(dl);
 }
 
 async function cargarAuto(){
@@ -70,25 +205,7 @@ async function cargarAuto(){
     if(!res.ok) throw new Error('HTTP '+res.status);
     const r=await res.json();
     auto.innerHTML='';
-    const h=document.createElement('h3');h.textContent=r.titulo||'Reporte';
-    auto.appendChild(h);
-    if(r.fecha){
-      const s=document.createElement('small');s.textContent=fmtFecha(r.fecha);
-      auto.appendChild(s);
-    }
-    if(r.descripcion){
-      const p=document.createElement('p');p.textContent=r.descripcion;
-      auto.appendChild(p);
-    }
-    const dl=document.createElement('dl');
-    Object.entries(r).forEach(([k,v])=>{
-      if(['titulo','fecha','descripcion'].includes(k)) return;
-      const dt=document.createElement('dt');dt.textContent=k;
-      const dd=document.createElement('dd');
-      dd.textContent=(v&&typeof v==='object')?Object.values(v).join(', '):String(v);
-      dl.append(dt,dd);
-    });
-    if(dl.children.length) auto.appendChild(dl);
+    if(esReporteCompleto(r)) dibujarCompleto(r); else dibujarSimple(r);
   }catch(err){
     auto.textContent='No se pudo cargar el reporte ('+err.message+')';
   }
