@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "titulo": "Reporte de prueba",
+  "descripcion": "Reporte de ejemplo para probar la app",
+  "fecha": "2026-11-09",
+  "estado": "pendiente",
+  "autor": "usuario_prueba",
+  "ubicacion": {
+    "estado": "Tamaulipas",
+    "pais": "México"
+  }
+}
