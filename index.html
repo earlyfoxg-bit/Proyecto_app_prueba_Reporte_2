@@ -107,6 +107,15 @@ li small{color:var(--muted)}
 #mapa svg{width:100%;height:auto;display:block;margin:8px 0}
 #mapa p{margin:6px 0;line-height:1.4;font-size:.92rem}
 #mapa .nota{color:var(--muted);font-size:.8rem}
+
+/* reportes anteriores */
+#hist{margin:0 0 16px}
+#hist button{width:100%;text-align:left;background:var(--card);color:var(--text);box-shadow:var(--shadow);padding:12px;display:flex;flex-direction:column;gap:2px}
+#hist button b{font-size:.95rem}
+#hist button small{color:var(--muted)}
+#hist li{padding:0;background:transparent;box-shadow:none}
+#viendo{background:color-mix(in srgb,var(--accent) 18%,var(--card));border-radius:8px;padding:8px;margin:0 0 10px;font-size:.88rem}
+#viendo button{padding:6px 10px;font-size:.85rem;margin-top:6px}
 </style>
 </head>
 <body>
@@ -133,6 +142,9 @@ li small{color:var(--muted)}
 
   <h2 id="mapaTitulo" hidden>Mapa de niveles</h2>
   <section id="mapa" hidden></section>
+
+  <h2 id="histTitulo" hidden>Reportes anteriores</h2>
+  <ul id="hist" hidden></ul>
 
   <form id="form">
     <input id="titulo" placeholder="Título" required>
@@ -425,15 +437,24 @@ function pintarMapa(){
 }
 
 /* ---------- carga y pintado del reporte ---------- */
-let ultimoReporte=null,ultimoError=null;
+let ultimoReporte=null,ultimoError=null,verFecha=null;
 function pintarReporte(){
   auto.innerHTML='';
+  if(verFecha){
+    const v=el('div',null,null);v.id='viendo';
+    v.appendChild(el('span','Estás viendo un reporte anterior ('+fmtFecha(verFecha)+').'));
+    v.appendChild(document.createElement('br'));
+    const vb=el('button','← Volver al reporte más reciente');
+    vb.type='button';vb.onclick=cargarAuto;
+    v.appendChild(vb);
+    auto.appendChild(v);
+  }
   if(ultimoError){
-    auto.textContent='No se pudo cargar el reporte ('+ultimoError+')';
+    auto.appendChild(document.createTextNode('No se pudo cargar el reporte ('+ultimoError+')'));
   }else if(ultimoReporte){
     if(esReporteCompleto(ultimoReporte)) dibujarCompleto(ultimoReporte); else dibujarSimple(ultimoReporte);
   }else{
-    auto.textContent='Cargando…';
+    auto.appendChild(document.createTextNode('Cargando…'));
   }
   const b=document.createElement('button');
   b.id='recargar';b.textContent='Actualizar';b.onclick=cargarAuto;
@@ -441,6 +462,7 @@ function pintarReporte(){
   try{pintarMapa();}catch(e){document.getElementById('mapa').hidden=true;document.getElementById('mapaTitulo').hidden=true;}
 }
 async function cargarAuto(){
+  verFecha=null;
   auto.textContent='Cargando…';
   try{
     const res=await fetch('reporte.json?t='+Date.now(),{cache:'no-store'});
@@ -450,6 +472,38 @@ async function cargarAuto(){
     ultimoError=err.message;
   }
   pintarReporte();
+  cargarHistorial();
+}
+
+/* ---------- lista de reportes anteriores (carpeta historial/) ---------- */
+async function cargarHistorial(){
+  const ul=document.getElementById('hist'),t=document.getElementById('histTitulo');
+  ul.innerHTML='';
+  try{
+    const res=await fetch('historial/index.json?t='+Date.now(),{cache:'no-store'});
+    if(!res.ok) throw new Error('sin historial');
+    const lista=arr(await res.json()).filter(h=>h&&/^\d{4}-\d{2}-\d{2}$/.test(String(h.fecha)));
+    if(!lista.length) throw new Error('vacío');
+    lista.forEach(h=>{
+      const li=document.createElement('li');
+      const b=document.createElement('button');b.type='button';
+      b.append(el('b',fmtFecha(h.fecha)),el('small',h.titulo||'Reporte'));
+      b.onclick=()=>verAnterior(h.fecha);
+      li.appendChild(b);ul.appendChild(li);
+    });
+    ul.hidden=false;t.hidden=false;
+  }catch(e){ul.hidden=true;t.hidden=true;}
+}
+async function verAnterior(f){
+  try{
+    const res=await fetch('historial/'+f+'.json?t='+Date.now(),{cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    ultimoReporte=await res.json();ultimoError=null;verFecha=f;
+  }catch(err){
+    ultimoError=err.message;verFecha=null;
+  }
+  pintarReporte();
+  auto.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function mostrar(){
