@@ -69,6 +69,9 @@ li p{margin:4px 0;white-space:pre-wrap}
 li small{color:var(--muted)}
 .borrar{background:#dc2626;padding:6px 10px;font-size:.85rem;margin-top:6px}
 
+/* aviso de sin conexión */
+#estado{background:var(--medio-bg);color:var(--medio-fg);border-radius:8px;padding:8px 10px;margin:0 0 12px;font-size:.88rem}
+
 /* configuración */
 #config{background:var(--card);border-radius:10px;padding:12px;box-shadow:var(--shadow);margin-bottom:16px}
 #config h2{margin:0 0 8px;font-size:1.05rem}
@@ -136,6 +139,8 @@ li small{color:var(--muted)}
     <div class="opts" id="o-secciones"></div>
     <button id="restablecer" type="button">Restablecer</button>
   </section>
+
+  <div id="estado" role="status" hidden></div>
 
   <h2>Reporte automático</h2>
   <section id="auto">Cargando…</section>
@@ -436,6 +441,15 @@ function pintarMapa(){
   if(m.nota) cont.appendChild(el('p',m.nota,'nota'));
 }
 
+/* ---------- aviso de sin conexión ---------- */
+function pintarEstado(){
+  const e=document.getElementById('estado');
+  if(navigator.onLine){e.hidden=true;return;}
+  const f=ultimoReporte&&ultimoReporte.fecha?' (del '+fmtFecha(ultimoReporte.fecha)+')':'';
+  e.textContent='Sin conexión · mostrando el último reporte guardado'+f+'.';
+  e.hidden=false;
+}
+
 /* ---------- carga y pintado del reporte ---------- */
 let ultimoReporte=null,ultimoError=null,verFecha=null;
 function pintarReporte(){
@@ -460,6 +474,7 @@ function pintarReporte(){
   b.id='recargar';b.textContent='Actualizar';b.onclick=cargarAuto;
   auto.appendChild(b);
   try{pintarMapa();}catch(e){document.getElementById('mapa').hidden=true;document.getElementById('mapaTitulo').hidden=true;}
+  pintarEstado();
 }
 async function cargarAuto(){
   verFecha=null;
@@ -535,6 +550,8 @@ form.addEventListener('submit',e=>{
 });
 
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+window.addEventListener('offline',pintarEstado);
+window.addEventListener('online',cargarAuto);
 aplicar();
 dibujarConfig();
 mostrar();
