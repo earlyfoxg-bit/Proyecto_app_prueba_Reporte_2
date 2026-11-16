@@ -450,8 +450,44 @@ function pintarEstado(){
   e.hidden=false;
 }
 
+/* ---------- copia de los reportes en el teléfono ---------- */
+const ARCH_KEY='archivo',VISTOS_KEY='autoVistos';
+const esFecha=f=>/^\d{4}-\d{2}-\d{2}$/.test(String(f));
+function leerArchivo(){
+  try{return arr(JSON.parse(localStorage.getItem(ARCH_KEY)||'[]'));}catch(e){return [];}
+}
+/* guarda el reporte completo para poder abrirlo sin internet (máximo 15) */
+function guardarEnArchivo(r){
+  if(!r||typeof r!=='object'||!esFecha(r.fecha)) return;
+  try{
+    let a=leerArchivo().filter(x=>x&&x.fecha!==r.fecha);
+    a.push({fecha:r.fecha,titulo:r.titulo||'Reporte',datos:r});
+    a.sort((x,y)=>String(y.fecha).localeCompare(String(x.fecha)));
+    localStorage.setItem(ARCH_KEY,JSON.stringify(a.slice(0,15)));
+  }catch(e){}
+}
+/* agrega el reporte nuevo a "Mis reportes" una sola vez por fecha */
+function agregarAMisReportes(r){
+  if(!r||typeof r!=='object'||!esFecha(r.fecha)) return;
+  try{
+    const vistos=arr(JSON.parse(localStorage.getItem(VISTOS_KEY)||'[]'));
+    if(vistos.includes(r.fecha)) return;
+    vistos.push(r.fecha);
+    localStorage.setItem(VISTOS_KEY,JSON.stringify(vistos.slice(-60)));
+    const rs=cargar();
+    rs.unshift({
+      id:'auto-'+r.fecha,
+      titulo:r.titulo||'Reporte',
+      descripcion:r.resumen||r.descripcion||'',
+      prioridad:'Automático',
+      fecha:new Date().toISOString()
+    });
+    guardar(rs);mostrar();
+  }catch(e){}
+}
+
 /* ---------- carga y pintado del reporte ---------- */
-let ultimoReporte=null,ultimoError=null,verFecha=null;
+let ultimoReporte=null,ultimoError=null,verFecha=null,fechaActual=null;
 function pintarReporte(){
   auto.innerHTML='';
   if(verFecha){
@@ -483,39 +519,70 @@ async function cargarAuto(){
     const res=await fetch('reporte.json?t='+Date.now(),{cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     ultimoReporte=await res.json();ultimoError=null;
+    fechaActual=ultimoReporte&&ultimoReporte.fecha?String(ultimoReporte.fecha):null;
+    guardarEnArchivo(ultimoReporte);
+    agregarAMisReportes(ultimoReporte);
   }catch(err){
-    ultimoError=err.message;
+    /* sin internet: usa la copia más reciente guardada en el teléfono */
+    const a=leerArchivo()[0];
+    if(a&&a.datos){
+      ultimoReporte=a.datos;ultimoError=null;
+      fechaActual=a.fecha;
+    }else{
+      ultimoError=err.message;
+    }
   }
   pintarReporte();
   cargarHistorial();
 }
 
-/* ---------- lista de reportes anteriores (carpeta historial/) ---------- */
+/* ---------- lista de reportes anteriores (carpeta historial/ y copias del teléfono) ---------- */
 async function cargarHistorial(){
   const ul=document.getElementById('hist'),t=document.getElementById('histTitulo');
   ul.innerHTML='';
+  let lista=[];
   try{
     const res=await fetch('historial/index.json?t='+Date.now(),{cache:'no-store'});
-    if(!res.ok) throw new Error('sin historial');
-    const lista=arr(await res.json()).filter(h=>h&&/^\d{4}-\d{2}-\d{2}$/.test(String(h.fecha)));
-    if(!lista.length) throw new Error('vacío');
-    lista.forEach(h=>{
-      const li=document.createElement('li');
-      const b=document.createElement('button');b.type='button';
-      b.append(el('b',fmtFecha(h.fecha)),el('small',h.titulo||'Reporte'));
-      b.onclick=()=>verAnterior(h.fecha);
-      li.appendChild(b);ul.appendChild(li);
-    });
-    ul.hidden=false;t.hidden=false;
-  }catch(e){ul.hidden=true;t.hidden=true;}
+    if(res.ok) lista=arr(await res.json()).filter(h=>h&&esFecha(h.fecha));
+  }catch(e){}
+  const ya=new Set(lista.map(h=>String(h.fecha)));
+  leerArchivo().forEach(a=>{
+    if(a&&!ya.has(a.fecha)&&a.fecha!==fechaActual) lista.push({fecha:a.fecha,titulo:a.titulo});
+  });
+  lista.sort((x,y)=>String(y.fecha).localeCompare(String(x.fecha)));
+  if(!lista.length){ul.hidden=true;t.hidden=true;return;}
+  lista.forEach(h=>{
+    const li=document.createElement('li');
+    const b=document.createElement('button');b.type='button';
+    b.append(el('b',fmtFecha(h.fecha)),el('small',h.titulo||'Reporte'));
+    b.onclick=()=>verAnterior(h.fecha);
+    li.appendChild(b);ul.appendChild(li);
+  });
+  ul.hidden=false;t.hidden=false;
+  precargar(lista);
+}
+/* con internet, guarda en el teléfono los reportes anteriores que aún no tiene */
+async function precargar(lista){
+  if(!navigator.onLine) return;
+  const hay=new Set(leerArchivo().map(a=>a.fecha));
+  const faltan=lista.filter(h=>!hay.has(String(h.fecha))&&h.fecha!==fechaActual).slice(0,10);
+  for(const h of faltan){
+    try{
+      const res=await fetch('historial/'+h.fecha+'.json',{cache:'no-store'});
+      if(res.ok) guardarEnArchivo(await res.json());
+    }catch(e){}
+  }
 }
 async function verAnterior(f){
   try{
     const res=await fetch('historial/'+f+'.json?t='+Date.now(),{cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     ultimoReporte=await res.json();ultimoError=null;verFecha=f;
+    guardarEnArchivo(ultimoReporte);
   }catch(err){
-    ultimoError=err.message;verFecha=null;
+    const a=leerArchivo().find(x=>x&&x.fecha===f);
+    if(a&&a.datos){ultimoReporte=a.datos;ultimoError=null;verFecha=f;}
+    else{ultimoError=err.message;verFecha=null;}
   }
   pintarReporte();
   auto.scrollIntoView({behavior:'smooth',block:'start'});
