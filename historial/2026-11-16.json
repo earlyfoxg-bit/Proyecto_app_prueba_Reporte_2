@@ -1,0 +1,89 @@
+{
+  "titulo": "Reporte DXY y MNQ - 2026-11-16",
+  "fecha": "2026-11-16",
+  "generado": "Lunes 16-nov-2026, 6:03 a. m. CDMX (7:03 a. m. ET). CDMX = ET menos 1 hora. Fuentes consultadas ≈6:50-7:10 a. m. ET.",
+  "resumen": "El dólar está en máximos de 19 meses (DXY ≈ 103.45-103.53, máximo de madrugada 103.486) con el rendimiento a 10 años cerca de 5.13 %. El Nasdaq-100 cerró el viernes con -1.22 % y hoy cotiza cerca de -0.9 % en premercado por la presión en semiconductores. Hoy (11:00 a. m. CDMX) habla la presidenta de la Fed, Kevin Warsh.",
+  "dxy": {
+    "texto": "Ayer (domingo 15) no hubo sesión relevante. El viernes 13 el DXY cerró en 103.41 (≈ +0.23 %), tras tres sesiones al alza y en su nivel más alto desde abril de 2025. Hoy hizo un máximo de 103.486 en la madrugada (máximo de 19 meses) y cotiza en ~103.45-103.53, cerca de +0.1 % frente al viernes. Hay una discrepancia menor sobre el cierre previo (103.17 en SP Angel vs 103.41 en otras fuentes), probablemente por horarios de corte distintos. Balance: dólar fortalecido en ambos periodos. Factores asociados: inflación de octubre fuerte y comentarios restrictivos de la Fed; el mercado descuenta ~92 % de alza de 25 pb en diciembre y ~8 % de 50 pb (Trading Economics, citando CME FedWatch), con más alzas hacia 2027; demanda de refugio por tensión EE. UU.-Irán; datos débiles de China; EUR/USD ~1.10 y USD/JPY ~159.5-160.",
+    "datos": [
+      {"concepto": "AYER dom 15-nov", "valor": "Sin sesión relevante"},
+      {"concepto": "Viernes 13-nov: cierre", "valor": "103.41 (≈ +0.23 %)"},
+      {"concepto": "Viernes 13-nov: apertura, máximo y mínimo", "valor": "No disponible (probé: Trading Economics, IC, Barchart)"},
+      {"concepto": "HOY lun 16-nov: máximo de madrugada", "valor": "103.486 (máximo de 19 meses)"},
+      {"concepto": "HOY lun 16-nov (~7:00 a. m. ET): cotización", "valor": "~103.45-103.53 (≈ +0.1 %)"},
+      {"concepto": "Cierre previo según SP Angel", "valor": "103.17 (discrepancia menor con 103.41)"}
+    ]
+  },
+  "noticias": {
+    "ayer": "Domingo 15: sin datos de EE. UU. relevantes. Viernes 13: PPI de octubre 6.5 % a/a (esperado 6.6 %), 0.3 % m/m (esperado 0.4 %); núcleo 5.0 % a/a y 0.3 % m/m, en línea. El 10 años cerró casi sin cambio en ~5.13 % (máximo intradía 5.17 %). El 2 años bajó ~4 pb el viernes, tras su mayor alza semanal en más de dos años (referencia 4.86 % el 12-nov). Tecnológicas: ventas fuertes en Nvidia tras la salida de su CEO Jensen Huang; Cisco y AMAT reportaron resultados.",
+    "hoy": "Hasta las 7:00 a. m. ET: 10 años ~5.13-5.14 % (CNBC 4:17 a. m. ET: 5.131 %, -2 pb); 2 años -2 pb. Se espera discurso de la presidenta de la Fed, Kevin Warsh, y de Beth Hammack. El miércoles siguen las minutas del FOMC, con dos disidencias a favor de subir tasas en la reunión de octubre. Semana de alto impacto en IA: resultados de Nvidia (martes) y debut bursátil de Anthropic (segunda mitad de la semana)."
+  },
+  "eventos_usd": [
+    {"bloque": "Ayer", "hora": "Domingo 15", "evento": "Ninguno", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "n/a"},
+    {"bloque": "Ayer", "hora": "Viernes 13, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PPI de octubre (m/m)", "impacto": "Alto (clasificación propia)", "anterior": "No disponible (probé: TE, Reuters, IC)", "pronostico": "0.4 %", "real": "0.3 %"},
+    {"bloque": "Hoy", "hora": "Antes de las 7:00 a. m. ET", "evento": "Ningún evento USD de impacto medio/alto publicado", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "n/a"},
+    {"bloque": "Pendiente", "hora": "11:00 a. m. CDMX (12:00 p. m. ET)", "evento": "Discurso de la presidenta de la Fed, Kevin Warsh", "impacto": "Alto (clasificación propia)", "anterior": "n/a", "pronostico": "n/a", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "No disponible (probé: Reuters, TE, MLQ)", "evento": "Discurso de Beth Hammack (Fed Cleveland)", "impacto": "Medio (clasificación propia)", "anterior": "n/a", "pronostico": "n/a", "real": "Pendiente"}
+  ],
+  "nota_eventos": "Reacción observada del viernes: DXY ≈ +0.23 % y NQ -1.23 % ese día (asociación observada; el PPI fue algo menor al previsto, así que el movimiento parece más ligado a otros factores). No pude confirmar un calendario completo de Forex Factory/Investing.com para hoy; el calendario de MNI que abrí correspondía a 2025 y lo descarté. Mañana martes 17: ventas minoristas de octubre (8:30 a. m. ET; se esperan planas) y Empire State.",
+  "nasdaq": {
+    "texto": "El viernes el Nasdaq-100 (índice) cayó -1.22 % a 27,943.74; Nasdaq Composite -0.91 % a 25,136.27; S&P 500 -0.40 % a 7,561.67. Nvidia ≈ -2 %, AMD ≈ -8.8 %, Broadcom ≈ -4.8 %, índice de semiconductores -3.4 %. Hoy en premercado el NQ está ~27,779 (-255 pts, ≈ -0.9 %) hacia las 6:00 a. m. ET; Reuters reportó -273 pts (-0.97 %) a las 5:08 a. m. ET.",
+    "puntos": [
+      "Asociación observada: dólar y rendimientos al alza coincidieron con caída del Nasdaq, pero el principal impulsor citado por las fuentes fue específico de IA y semiconductores (Nvidia), no el dólar.",
+      "Relación no clara: en la semana el NQ subió ~3 % con el dólar también al alza, por lo que la relación inversa no fue consistente.",
+      "Hoy el rendimiento del 2 años cedió algunos puntos básicos, pero el índice sigue presionado por IA."
+    ]
+  },
+  "niveles": [
+    {"concepto": "Contrato y sesión", "valor": "NQZ6 (diciembre 2026), activo hoy; fecha de roll no verificada. Sesión: Globex 24 horas (corte 5:00 p. m. ET). Cotizaciones del NQ valen para el MNQ en puntos."},
+    {"concepto": "Viernes 13: apertura (Bloomberg y Yahoo)", "valor": "28,399.25"},
+    {"concepto": "Viernes 13: máximo (Bloomberg y Yahoo)", "valor": "28,607.75"},
+    {"concepto": "Viernes 13: mínimo", "valor": "27,695.25 (Bloomberg); 27,958.50 (Yahoo)"},
+    {"concepto": "Viernes 13: cierre / liquidación", "valor": "28,034.75 (-349.75, -1.23 %) Bloomberg/CME; Yahoo 27,975.75; investingLive 27,927.25 (discrepancia probablemente por distinto corte de sesión)"},
+    {"concepto": "Hoy (~6:00 a. m. ET): precio actual NQ Dec", "valor": "~27,779 (≈ -255 pts, -0.91 % vs liquidación, calculado)"},
+    {"concepto": "Niveles citados por analistas", "valor": "28,028 (nivel de estabilidad) y 28,606 (techo) según Plus3; mínimo del viernes 27,695; 27,177 y la zona 26,350-26,400 como soportes más abajo (investingLive)"}
+  ],
+  "escenarios": [
+    {"tipo": "Alcista", "texto": "El NQ recupera 28,028 con calma en dólar y rendimientos tras Warsh y las minutas; Nvidia estabiliza antes de resultados."},
+    {"tipo": "Bajista", "texto": "Discurso restrictivo de Warsh, dólar en máximos y nuevas ventas en semiconductores empujan al NQ a probar 27,695 o menos."},
+    {"tipo": "Neutral", "texto": "Rango entre ~27,700 y ~28,030 mientras el mercado espera Nvidia (martes) y minutas FOMC (miércoles)."}
+  ],
+  "agenda": [
+    {"hora": "8:30 a. m. CDMX (9:30 a. m. ET)", "evento": "Apertura del mercado de acciones"},
+    {"hora": "11:00 a. m. CDMX (12:00 p. m. ET)", "evento": "Discurso de Warsh"},
+    {"hora": "Por confirmar", "evento": "Hammack"},
+    {"hora": "Hoy", "evento": "Baidu (antes de la apertura); fecha límite de 13F (Berkshire)"},
+    {"hora": "Martes 17-nov, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Ventas minoristas y resultados de Nvidia"},
+    {"hora": "Miércoles 18-nov", "evento": "Minutas del FOMC"},
+    {"hora": "Jueves 19-nov", "evento": "Cumbre Trump-Xi-Putin en APEC (según MNI)"}
+  ],
+  "conclusion": "El dólar está en máximos de 19 meses, el 10 años cerca de 5.13 % y el NQ cede ~0.9 % en premercado por la presión en semiconductores. Vigilar: discurso de Warsh (11:00 a. m. CDMX), la zona 28,028 por arriba, y 27,695 / 27,177 por abajo, además de la reacción de DXY y rendimientos. No hay señal de compra o venta sin confirmación del precio; los riesgos incluyen Nvidia, la Fed y el sesgo geopolítico.",
+  "fuentes": [
+    {"titulo": "Trading Economics - US Dollar (DXY)", "url": "https://tradingeconomics.com/united-states/currency"},
+    {"titulo": "IC - General Market Analysis, 16-nov-2026", "url": "https://www.ic.com/blog/general-market-analysis-16-november-2026-ic/"},
+    {"titulo": "SP Angel - Today's Market View, 16-nov-2026", "url": "https://www.share-talk.com/sp-angel-todays-market-view-monday-16th-november-2026/"},
+    {"titulo": "Reuters/Yahoo - S&P 500, Nasdaq futures slide", "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-futures-slide-104351968.html"},
+    {"titulo": "Yahoo Finance - Stock market today, 16-nov", "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html"},
+    {"titulo": "Saxo - Market Quick Take, 16-nov-2026", "url": "https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---fed-chair-warsh-to-speak-today---16-november-2026-16112026"},
+    {"titulo": "MLQ - What to watch Monday, Nov. 16", "url": "https://mlq.ai/news/what-to-watch-monday-nov-16-warsh-speaks-at-noon-and-the-13f-deadline-brings-berkshires-third-quarter-holdings/"},
+    {"titulo": "AP - How major US stock indexes fared Friday 11/13/2026", "url": "https://wtop.com/national/2026/11/how-major-us-stock-indexes-fared-friday-11-13-2026/"},
+    {"titulo": "Bloomberg - NQ1 futures", "url": "https://www.bloomberg.com/markets/stocks/futures"},
+    {"titulo": "Yahoo Finance - NQ=F historial", "url": "https://finance.yahoo.com/quote/NQ=F/history/"},
+    {"titulo": "investingLive - Nvidia vs Nasdaq futures", "url": "https://investinglive.com/stocks/nvida-stock-analysis-before-its-earnings"},
+    {"titulo": "Plus3 Forecasting - Knocking on the Roof", "url": "https://plus3forecasting.substack.com/p/knocking-on-the-roof-spx-7625-and"},
+    {"titulo": "Trading Economics - Week Ahead Nov 16", "url": "https://tradingeconomics.com/calendar?article=29379&g=top&importance=2&startdate=2026-11-13"}
+  ],
+  "aviso": "Informe informativo; no constituye asesoría financiera.",
+  "mapa": {
+    "titulo": "DXY: niveles a vigilar",
+    "actualizado": "Cotización de ~7:00 a. m. ET (rango 103,45-103,53)",
+    "precio": {"valor": 103.49, "etiqueta": "Ahora ≈103,49"},
+    "niveles": [
+      {"valor": 103.486, "etiqueta": "103,486 Máximo de hoy (19 meses)"},
+      {"valor": 103.41, "etiqueta": "103,41 Cierre del viernes"},
+      {"valor": 103.17, "etiqueta": "103,17 Cierre previo (SP Angel)"}
+    ],
+    "flechas": [],
+    "nota": "Dibujo de niveles tomados del reporte; no es un pronóstico ni una señal. Las flechas muestran hacia dónde apuntan los niveles, no su probabilidad."
+  }
+}
