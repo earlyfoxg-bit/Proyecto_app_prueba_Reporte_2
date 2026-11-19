@@ -1,0 +1,108 @@
+{
+  "titulo": "Reporte DXY y MNQ - 2026-11-18",
+  "fecha": "2026-11-18",
+  "generado": "Miércoles 18-nov-2026, 6:02 a. m. CDMX (7:02 a. m. ET). CDMX = ET menos 1 hora. Antes de la apertura de Nueva York (8:30 a. m. CDMX / 9:30 a. m. ET).",
+  "resumen": "El dólar se mantiene fuerte, cerca de su nivel más alto desde abril de 2025 (~103.6 hoy), apoyado en expectativas de más alzas de la Fed. Ayer el Nasdaq-100 cerró en 27,001.79 (-0.72 %), y hoy los futuros rebotan cerca de +0.9 % tras los resultados de Nvidia. Hoy destacan las minutas del FOMC (1:00 p. m. CDMX / 2:00 p. m. ET).",
+  "dxy": {
+    "texto": "El dólar sigue fuerte, cerca de su nivel más alto desde abril de 2025, apoyado en expectativas de más alzas de la Fed. LUNES 16 (contexto): subió a ~103.4; cierre ICE reportado en 103.58 (+0.16 %). Factores: inflación al consumidor y al productor más altas, mensajes restrictivos de la Fed y debilidad del euro por preocupación fiscal en Francia. AYER martes 17: máximo intradía sobre 103.5 y retroceso a ~103.4 al cierre del día según Trading Economics (cierre exacto no confirmado). Factores: datos de ventas minoristas, Musalem (hasta cuatro alzas), Williams y Hammack; mayor ganancia frente a euro, kiwi y dólar australiano. HOY miércoles 18 (hasta 7:00 a. m. ET): ~103.6, nuevo máximo desde abril de 2025 (Trading Economics). Factores: probabilidad de alza de 25 pb en diciembre cercana a 96 % y espera de las minutas de la Fed.",
+    "datos": [
+      {"concepto": "Apertura, máximo, mínimo y cierre", "valor": "No disponible con precisión (probé: Trading Economics, TradingNews, Schwab, Barchart; CNBC e Investing bloquearon la consulta)"},
+      {"concepto": "Cierre lunes 16 / martes 17", "valor": "Las fuentes discrepan: 103.4 (Trading Economics), 103.58 (TradingNews, ICE) y 103.70 (Schwab). Se reportan como rango, sin elegir uno"},
+      {"concepto": "Lunes 16", "valor": "Subió a ~103.4; cierre ICE reportado en 103.58 (+0.16 %)"},
+      {"concepto": "Ayer martes 17", "valor": "Máximo intradía sobre 103.5; ~103.4 al cierre del día según Trading Economics (no confirmado)"},
+      {"concepto": "Hoy 7:00 a. m. ET", "valor": "~103.6, nuevo máximo desde abril de 2025 (Trading Economics)"},
+      {"concepto": "Fed: probabilidad en diciembre", "valor": "~96 % para +25 pb (hoy); 95-97 % para +25 pb y ~4 % para +50 pb (ayer)"}
+    ]
+  },
+  "noticias": {
+    "ayer": "Ventas minoristas de octubre: titular +0.2 % m/m, en línea con lo esperado (anterior 0.8 %); el grupo de control habría subido +0.6 % frente a ~0.4 % esperado (dato de una sola fuente: Capital Street FX). Los rendimientos subieron tras la publicación. Fed: Musalem (St. Louis) dijo que podrían necesitarse hasta cuatro alzas en los próximos meses; Hammack (Cleveland) prefiere alzas graduales pero abre la puerta a movimientos mayores; Williams (NY) enfatizó la necesidad de frenar la inflación. Tasa vigente: 3.75 %-4.00 % (alza en septiembre). Probabilidad de alza de 25 pb en diciembre: 95-97 %; de 50 pb: ~4 %. Bonos: el rendimiento a 10 años cerró cerca de 5.10 % (5.107 % / 5.102 % según dos fuentes). Último dato oficial de FRED: 10 años 5.12 % y 2 años 4.83 % (cierre del lunes 16). Rendimiento a 2 años de ayer: No disponible (probé: FRED, CNBC, TradingNews). Acciones: S&P 500 -1.03 % a 7,340.53 (mínimo de cinco meses); Dow -1.64 % a 50,759.42; Nasdaq Composite -0.74 % a 24,328.38; Nasdaq-100 -0.72 % a 27,001.79. Los 11 sectores cerraron a la baja; Salesforce cayó 9.45 %. Hubo presión adicional por un reporte de caída de red en la NSA y por ventas de semiconductores antes de Nvidia. Nvidia (después del cierre): ingresos de 115.84 mil millones de dólares frente a ~109.15 esperados; BPA ajustado 2.68 frente a 2.47; guía del cuarto trimestre de ~130 mil millones (±3 %); recompra de 150 mil millones; el consejo descartó reinstalar a Jensen Huang.",
+    "hoy": "Futuros al alza tras Nvidia: Nasdaq-100 entre +0.84 % y +1.2 % según la hora de la fuente (a las 4:14 a. m. ET: +252 puntos, +0.9 %); S&P 500 ~+0.5-0.65 %; Dow ~+0.2-0.3 %. Nvidia subía ~3-4 % en premercado; semiconductores y neoclouds también subían. Petróleo WTI ~83 dólares (-1.95 %); el lunes había caído a 85.72 por exceso de oferta según la AIE. Rendimientos del Tesoro a 2 y 10 años de hoy en premercado: No disponible (probé: FRED, Schwab, Benzinga, CNBC). Ningún evento USD de impacto medio o alto publicado antes de las 7:00 a. m. ET."
+  },
+  "eventos_usd": [
+    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Ventas minoristas oct. m/m", "impacto": "Alto (clasificación propia)", "anterior": "0.8 %", "pronostico": "0.2 %", "real": "0.2 %"},
+    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Ventas minoristas ex autos y gasolina", "impacto": "Medio (clasificación propia)", "anterior": "0.2 %", "pronostico": "0.3 %", "real": "No disponible (probé: TD, CapitalStreet, StockTitan)"},
+    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Grupo de control", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "~0.4 %", "real": "~0.6 % (una fuente)"},
+    {"bloque": "Ayer", "hora": "8:15 a. m. CDMX (9:15 a. m. ET)", "evento": "Producción industrial oct.", "impacto": "Medio (clasificación propia)", "anterior": "0.7 %", "pronostico": "0.1 %", "real": "No disponible (probé: TD, StockTitan, CapitalStreet)"},
+    {"bloque": "Ayer", "hora": "Varias", "evento": "Discursos Fed: Musalem 6:30 a. m. (7:30 a. m. ET), Waller 8:10 a. m. (9:10 a. m. ET), Hammack 8:30 a. m. (9:30 a. m. ET), Williams 1:25 p. m. (2:25 p. m. ET)", "impacto": "Medio (clasificación propia)", "anterior": "-", "pronostico": "-", "real": "Tono restrictivo"},
+    {"bloque": "Hoy", "hora": "Antes de las 7:00 a. m. ET", "evento": "Ningún evento USD de impacto medio o alto publicado", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "n/a"},
+    {"bloque": "Pendiente", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Permisos de construcción oct. (miles)", "impacto": "Medio", "anterior": "1,398", "pronostico": "1,378", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Inicios de vivienda oct. (miles)", "impacto": "Medio", "anterior": "1,221", "pronostico": "1,240", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "9:00 a. m. CDMX (10:00 a. m. ET)", "evento": "Ventas pendientes de vivienda oct. m/m", "impacto": "Medio", "anterior": "-7.3 %", "pronostico": "No disponible", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "12:35 p. m. CDMX (1:35 p. m. ET)", "evento": "Fed Barr, discurso", "impacto": "Medio", "anterior": "-", "pronostico": "-", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "1:00 p. m. CDMX (2:00 p. m. ET)", "evento": "Minutas del FOMC (reunión del 27-28 de oct.)", "impacto": "Alto", "anterior": "-", "pronostico": "-", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "1:30 p. m. CDMX (2:30 p. m. ET)", "evento": "Fed Williams, comentarios", "impacto": "Medio", "anterior": "-", "pronostico": "-", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "3:15 p. m. CDMX (4:15 p. m. ET)", "evento": "Fed Kashkari (dos intervenciones)", "impacto": "Medio", "anterior": "-", "pronostico": "-", "real": "Pendiente"}
+  ],
+  "nota_eventos": "Clasificación de importancia propia (las fuentes consultadas no rotulan el color), según el criterio habitual. Reacción observada ayer: tras las ventas minoristas los rendimientos subieron, el DXY se mantuvo firme (~103.4-103.5) y el MNQ/NQ no tuvo alivio y siguió débil; los discursos de la Fed tuvieron tono restrictivo, con el DXY estable cerca de máximos y ventas en acciones.",
+  "nasdaq": {
+    "texto": "Un dólar en máximos de 19-20 meses y rendimientos a 10 años por encima de 5.1 % coincidieron con la caída del Nasdaq-100: -2.67 % el lunes y -0.72 % ayer (acumula una caída de unos 4.2 % en noviembre hasta el lunes). Esto no demuestra causalidad: ayer también pesaron las ventas de semiconductores antes de Nvidia, el reporte sobre la NSA y la caída de software.",
+    "puntos": [
+      "Relación no clara: ayer el Nasdaq-100 cayó menos (-0.72 %) que el Dow (-1.64 %) y el S&P 500 (-1.03 %) pese al dólar fuerte; en el premercado de ayer los futuros del Nasdaq subían (~+0.46 % a las 8:00 a. m. ET) y revirtieron después de las ventas minoristas y los discursos de la Fed.",
+      "Hoy el repunte lo explica Nvidia más que el dólar, que sigue en máximos.",
+      "La volatilidad subió: VIX alrededor de 26 al cierre de ayer (22.9 el lunes) y el VXN cerca de 36.8 (segunda fuente, un blog; verificar)."
+    ]
+  },
+  "niveles": [
+    {"concepto": "Contrato analizado", "valor": "MNQZ6 (Micro E-mini Nasdaq-100 dic. 2026), equivalente en puntos a NQZ6; vence el 18 de dic. y el roll suele ocurrir hacia el 10-11 de dic."},
+    {"concepto": "Sesión usada para ayer", "valor": "Sesión regular de acciones (9:30 a. m.-4:00 p. m. ET) del índice Nasdaq-100 como aproximación; no se encontraron los precios de liquidación CME de la sesión Globex de 24 horas"},
+    {"concepto": "Apertura MNQ/NQ martes 17", "valor": "No disponible (probé: Barchart, TradingNews, CNBC)"},
+    {"concepto": "Máximo / mínimo MNQ/NQ martes 17", "valor": "No disponible (mismas fuentes)"},
+    {"concepto": "Liquidación/cierre NQ martes 17", "valor": "No disponible (probé: Barchart, CME, TradingNews)"},
+    {"concepto": "Cierre Nasdaq-100 (índice) martes 17", "valor": "27,001.79 (-0.72 %)"},
+    {"concepto": "Cierre Nasdaq-100 (índice) lunes 16", "valor": "27,197.15 (-2.67 %)"},
+    {"concepto": "Futuro NQ ayer, 8:00 a. m. ET", "valor": "27,410 (+125.75, +0.46 %); implica liquidación del lunes ~27,284 (calculado)"},
+    {"concepto": "Futuro Nasdaq-100 hoy, 4:14 a. m. ET", "valor": "+252 puntos (+0.9 %) vs cierre previo; precio exacto no confirmado"},
+    {"concepto": "Precio actual a las 7:00 a. m. ET", "valor": "No disponible con precisión; variación aproximada +0.9 % a +1.2 % frente al cierre previo (varía entre fuentes y horas)"}
+  ],
+  "escenarios": [
+    {"tipo": "Alcista", "texto": "Los resultados de Nvidia sostienen el repunte de semiconductores, el precio mantiene las ganancias del premercado y supera la zona 27,200 (cierre del lunes) y 27,400 (nivel del futuro de ayer). Podría ayudar que las minutas no sorprendan en tono restrictivo y que el WTI siga bajo."},
+    {"tipo": "Bajista", "texto": "El rebote se desvanece (como ayer, cuando el premercado positivo se revirtió), las minutas del FOMC refuerzan alzas múltiples o los rendimientos del 10 años suben sobre 5.15 %, y el precio regresa por debajo de 27,000 (cierre de ayer). La caída del lunes y del martes sin rebotes sostenidos muestra que las compras pueden desaparecer rápido."},
+    {"tipo": "Neutral", "texto": "Rango estrecho entre ~27,000 y ~27,400 hasta las minutas (1:00 p. m. CDMX / 2:00 p. m. ET), con la dirección definida por la reacción de la tarde."}
+  ],
+  "agenda": [
+    {"hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Permisos de construcción e inicios de vivienda"},
+    {"hora": "8:30 a. m. CDMX (9:30 a. m. ET)", "evento": "Apertura del mercado de acciones"},
+    {"hora": "9:00 a. m. CDMX (10:00 a. m. ET)", "evento": "Ventas pendientes de vivienda"},
+    {"hora": "12:35 p. m. CDMX (1:35 p. m. ET)", "evento": "Fed Barr, discurso"},
+    {"hora": "1:00 p. m. CDMX (2:00 p. m. ET)", "evento": "Minutas del FOMC (reunión del 27-28 de oct.)"},
+    {"hora": "1:30 p. m. CDMX (2:30 p. m. ET)", "evento": "Fed Williams, comentarios"},
+    {"hora": "3:15 p. m. CDMX (4:15 p. m. ET)", "evento": "Fed Kashkari (dos intervenciones)"},
+    {"hora": "Durante el día", "evento": "Resultados de Target, TJX, Lowe's y Palo Alto; se espera que la OPV de Anthropic fije precio hoy y empiece a cotizar el jueves"},
+    {"hora": "Jueves 19-nov", "evento": "Jobless claims y más discursos de la Fed"}
+  ],
+  "conclusion": "Ayer el mercado cayó por quinto día en el S&P 500 con dólar y rendimientos altos y la Fed apuntando a más alzas; el Nasdaq-100 cerró en 27,001.79. Hoy el premercado rebota por Nvidia (~+1 %), pero el dólar sigue en máximos y los datos de 7:30 a. m. CDMX y las minutas de 1:00 p. m. CDMX pueden cambiar el tono. Niveles a vigilar en el Nasdaq-100/NQ: 27,000 (cierre de ayer), 27,200 (cierre del lunes) y 27,400 (zona del futuro de ayer); confirmar siempre con el precio. Este reporte no genera señales de compra o venta y no promete resultados.",
+  "fuentes": [
+    {"titulo": "Dollar Index Rises to 20-Month High y noticias del dólar, Trading Economics", "url": "https://tradingeconomics.com/united-states/currency/news/601669"},
+    {"titulo": "Stock Market Today (17 nov), TradingNews", "url": "https://www.tradingnews.com/news/stock-market-today-nasdaq-ixic-in-correction-sp-500-spx-eyes-7560-target-as-dow-dji-waits-on-nvda"},
+    {"titulo": "Closing Look - martes 17 de noviembre, Capp Notes", "url": "https://cappnotes.substack.com/p/closing-look-tuesday-november-17"},
+    {"titulo": "The Close: martes 17 de noviembre, The Weekend Spread", "url": "https://theweekendspread.substack.com/p/the-close-tuesday-november-17-2026"},
+    {"titulo": "Market Review 17 nov 2026, Investrade", "url": "https://investrade.com/market-review-november-17-2026/"},
+    {"titulo": "Large-Cap Flow Takes the Top Seat, Reflections of Reality", "url": "https://reflectionsofreality.substack.com/p/large-cap-flow-takes-the-top-seat"},
+    {"titulo": "TradingKey: cierre de Wall Street del 17 de noviembre", "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262309739-chip-stocks-fall-ahead-of-nvidia-earnings-nasdaq-hits-seven-month-low-tradingkey"},
+    {"titulo": "Reporte diario de índices, Capital Street FX", "url": "https://www.capitalstreetfx.com/market-analysis/daily-index-report-18-nov-2026/"},
+    {"titulo": "Stock Market Today, StockTitan", "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-17-2026"},
+    {"titulo": "Futuros suben tras Nvidia, MLQ", "url": "https://mlq.ai/news/nasdaq-100-futures-rise-252-points-after-nvidias-results-as-nebius-and-coreweave-jump-and-europe-holds-flat/"},
+    {"titulo": "Nvidia premercado, Benzinga", "url": "https://www.benzinga.com/markets/equities/26/11/63377299/nvidia-shares-premarket-rally-q3-earnings-beat"},
+    {"titulo": "Dow/S&P futuros antes de minutas FOMC, Benzinga", "url": "https://www.benzinga.com/markets/equities/26/11/63377414/stock-market-today-dow-jones-sp-500-futures-rise-ahead-of-fomc-minutes-nvda-aaoi-panw-in-focus"},
+    {"titulo": "Nvidia earnings live, Yahoo Finance", "url": "https://finance.yahoo.com/technology/live/nvidia-earnings-live-nvidia-posts-q3-beat-board-says-it-will-not-reinstate-jensen-huang-as-ceo-221428433.html"},
+    {"titulo": "FRED DGS10", "url": "https://fred.stlouisfed.org/series/DGS10"},
+    {"titulo": "FRED DGS2", "url": "https://fred.stlouisfed.org/series/DGS2"},
+    {"titulo": "Calendario económico semanal, TD Economics", "url": "https://economics.td.com/domains/economics.td.com/documents/reports/bottom-line/tables/2026-11-13/upcoming.htm"},
+    {"titulo": "Calendario de la Reserva Federal, noviembre 2026", "url": "https://www.federalreserve.gov/newsevents/2026-november.htm"},
+    {"titulo": "Newsquawk: calendario semanal 16-20 nov. 2026", "url": "https://www.newsquawk.com/headlines/newsquawk-weekly-economic-release-16th---20th-november-2026"}
+  ],
+  "aviso": "Reporte informativo; no constituye asesoría financiera.",
+  "mapa": {
+    "titulo": "DXY: niveles a vigilar",
+    "actualizado": "Cotización de ~7:00 a. m. ET",
+    "precio": {"valor": 103.6, "etiqueta": "Ahora ≈103,6"},
+    "niveles": [
+      {"valor": 103.70, "etiqueta": "103,70 Cierre reportado por Schwab"},
+      {"valor": 103.58, "etiqueta": "103,58 Cierre del lunes (ICE)"},
+      {"valor": 103.5, "etiqueta": "103,50 Máximo intradía de ayer (sobre)"},
+      {"valor": 103.4, "etiqueta": "103,40 Cierre de ayer (Trading Economics)"}
+    ],
+    "flechas": [],
+    "nota": "Dibujo de niveles tomados del reporte; no es un pronóstico ni una señal. Las flechas muestran hacia dónde apuntan los niveles, no su probabilidad."
+  }
+}
