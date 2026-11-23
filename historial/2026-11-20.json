@@ -1,0 +1,100 @@
+{
+  "titulo": "Reporte DXY y MNQ - 2026-11-20",
+  "fecha": "2026-11-20",
+  "generado": "Viernes 20-nov-2026, 6:00 a. m. CDMX (7:00 a. m. ET). CDMX = ET menos 1 hora. Apertura de Nueva York: 8:30 a. m. CDMX (9:30 a. m. ET).",
+  "resumen": "El DXY está plano cerca de 103.88 tras cerrar ayer en máximos de ~19 meses (~103.90-103.95). Los futuros del Nasdaq-100 caen entre 1.10 % y 1.63 % por la venta de IA tras el debut de Anthropic, más que por el dólar o los rendimientos. Hoy hay Waller, sentimiento de Michigan y Cook; no hay eventos de alto impacto en USD.",
+  "dxy": {
+    "texto": "AYER (jue 19-nov): el DXY tocó 103.97 en la sesión asiática (máximo desde abril de 2025), cedió hacia ~103.65 por la mañana de EE. UU. cuando mejoró el apetito de riesgo y volvió a subir tras la reversión bajista de las acciones. Cerró en ~103.90-103.95, alza de ~0.1 %, su cierre más alto desde principios de abril de 2025. HOY (vie 20-nov, 7:00 a. m. ET): ~103.88, prácticamente sin cambio (-0.01 %); la variación semanal es de +0.5 % según Trading Economics (otra fuente habla de ~+0.8 %). Factores asociados: minutas del FOMC (18-nov) con casi todos los funcionarios a favor de más alzas; Waller y Goolsbee dejaron abierta una alza de 50 pb en diciembre; Paulson (Fed de Filadelfia) dijo que habrá que subir tasas otra vez; venta global de acciones de IA con demanda refugio por el dólar; Trading Economics además atribuye algo de demanda a inversionistas extranjeros que compraron dólares para la OPI de Anthropic (explicación de esa fuente, no verificada). Frente a otras divisas ayer: USD/JPY 159.68 (a 4 pips de 160.00), EUR/USD 1.0969, GBP/USD 1.3082, AUD/USD 0.6657; hoy USD/JPY baja a ~158.8 (-0.55 %, TE).",
+    "datos": [
+      {"concepto": "Cierre previo (mié 18-nov)", "valor": "~103.81 (TradeAlmanac)"},
+      {"concepto": "Apertura jue 19", "valor": "No disponible (probé: TradeAlmanac, FXStreet, Trading Economics)"},
+      {"concepto": "Máximo jue 19", "valor": "103.97 (FXStreet / varias)"},
+      {"concepto": "Mínimo jue 19", "valor": "No disponible con precisión; intradía ~103.6 (mínimo exacto no publicado)"},
+      {"concepto": "Cierre jue 19", "valor": "~103.90 (Trading Economics) vs 103.95 (Strategitz): las fuentes discrepan por ~0.05"},
+      {"concepto": "Actual 7:00 ET vie 20", "valor": "~103.88 (-0.01 %) (Trading Economics)"}
+    ]
+  },
+  "noticias": {
+    "ayer": "Rendimientos del Tesoro (cierre, investingLive): 2 años 4.766 % (-3.4 pb), 10 años 5.048 % (-1.8 pb), 30 años 5.405 %; curva diaria del Tesoro: 10a 5.04 %, 2a 4.76 %, 2s10s 28 pb. El 10 años estuvo por encima de 5 % todo el día; cayeron al final por compra refugio mientras las acciones caían. Fed: probabilidad de alza de 25 pb en la reunión del 8-9 dic ≈ 98 % (CME FedWatch vía Reuters); la de 50 pb bajó de ~8 % a ~6 % (TheStreet). Tasa actual 3.75-4.00 %. Goolsbee: inflación muy por encima del 2 % y todo está sobre la mesa; Paulson: hará falta subir. Acciones: S&P 500 7,175.83 (-2.02 %, 6.ª caída seguida, cierre más bajo desde el 29-abr), Dow 49,097.06 (-2.19 %, primer cierre bajo 50,000 desde junio), Nasdaq Composite 23,879.20 (-2.25 %). VIX ~28.4-28.9 (fuentes discrepan), el más alto desde el 30-mar. Anthropic (ANT): OPI a $83, abrió $111.50, máx $115.10, mín $92.72, cerró $97.17 (+17.07 %); AMD -7.7 % (informe de Hunterbrook), Nvidia -3.3 %, Walmart -1 % (resultados mejores pero guía débil). Tras el cierre: Intuit ~-10/11 % y Ross ~-5/-7 %. Materias primas: WTI liquidó $83.21, Brent $91.98; oro cayó ~2.2-2.7 % (a ~$3,625-3,660); bitcoin ~$61.6k.",
+    "hoy": "Futuros bajan por la reacción a la OPI de Anthropic (ANT -6.4 % a -6.8 % en preapertura) y por el tono restrictivo de la Fed; Wall Street va hacia su peor semana desde abril de 2025 (Reuters). 10 años en ~4.99 % (-6 pb, Trading Economics, una sola fuente): demanda refugio. WTI ~$81.6-82.3 y Brent ~$90.2-91.5 (-0.2 % a -1.9 %, según la hora). Sin datos USD de impacto medio/alto publicados antes de las 7:00 ET (verificado en TD, TheStreet y calendarios)."
+  },
+  "eventos_usd": [
+    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Solicitudes iniciales de desempleo", "impacto": "Medio", "anterior": "202K", "pronostico": "197K", "real": "203K (continuas 1.763M, +70K). Reacción observada: DXY retrocedió hacia ~103.65 y el 10a bajó ~2 pb; MNQ subía antes y revirtió al abrir ANT (asociación, no causalidad)"},
+    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Índice Philly Fed (nov) (clasificación propia)", "impacto": "Medio", "anterior": "20.9", "pronostico": "20.0", "real": "6.3 (precios pagados 58.2). Reacción observada: mensaje mixto, actividad débil con precios altos; el dólar se firmó en el día"},
+    {"bloque": "Ayer", "hora": "~12:30 p. m.-6:30 p. m. CDMX (varias)", "evento": "Goolsbee, Paulson y otros miembros de la Fed (clasificación propia)", "impacto": "Medio", "anterior": "No disponible", "pronostico": "No disponible", "real": "Tono restrictivo. Reacción observada: rendimientos y dólar sostenidos; acciones cayeron"},
+    {"bloque": "Hoy", "hora": "Hasta las 7:00 a. m. ET", "evento": "Ningún evento USD de impacto medio/alto publicado hasta ese momento", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "n/a"},
+    {"bloque": "Pendiente", "hora": "7:25 a. m. CDMX (8:25 a. m. ET)", "evento": "Fed Waller, palabras de bienvenida en College Fed Challenge (clasificación propia)", "impacto": "Medio", "anterior": "No disponible", "pronostico": "No disponible", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "9:00 a. m. CDMX (10:00 a. m. ET)", "evento": "U. de Michigan, sentimiento del consumidor final (nov) (clasificación propia; financecalendar.com la rotula baja)", "impacto": "Medio", "anterior": "51.0 (preliminar)", "pronostico": "No disponible (probé: financecalendar, TheStreet, Investing)", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "11:15 a. m. CDMX (12:15 p. m. ET)", "evento": "Fed Cook, la economía de EE. UU. en contexto global (clasificación propia)", "impacto": "Medio", "anterior": "No disponible", "pronostico": "No disponible", "real": "Pendiente"}
+  ],
+  "nota_eventos": "No hay eventos de carpeta roja (alto impacto) USD hoy. Siguiente evento alto: PCE de octubre, miércoles 25-nov 7:30 a. m. CDMX (8:30 a. m. ET). Jueves 26-nov es feriado (Thanksgiving) y el viernes 27 cierre temprano.",
+  "nasdaq": {
+    "texto": "Ayer el Nasdaq-100 llegó a subir ~2 % en la mañana (con el dólar cediendo desde 103.97) y terminó -2.15 % a -2.21 % (cierre del cash ~26,533, cotización tardía), con 446 de 502 acciones del S&P a la baja. El dólar cerró en máximos de 19 meses y los rendimientos del 10 años siguieron sobre 5 %. Esto es consistente con presión por dólar fuerte y rendimientos altos, pero la relación no fue limpia.",
+    "puntos": [
+      "Ayer: el desplome se aceleró cuando empezó a cotizar ANT (rotación/liquidación de posiciones en IA) y los rendimientos bajaron mientras las acciones caían (huida a refugio), no un susto de crecimiento.",
+      "Hoy: DXY plano (~103.88) y 10 años más bajo (~4.99 %), pero los futuros del Nasdaq-100 caen entre -1.10 % y -1.63 % según la hora; el dólar y los rendimientos no explican el movimiento, domina la venta de IA (Anthropic -6 %, Nvidia -2.6 %, AMD -5 %, Amazon/Meta/Microsoft ~-2 %).",
+      "Contexto: Nasdaq a 13.6 % de su récord del 6-oct; opciones: gamma de dealers muy negativa (-$7.3 mil millones, Nomura vía TheStreet), lo que amplifica movimientos intradía."
+    ]
+  },
+  "niveles": [
+    {"concepto": "Contrato analizado", "valor": "MNQZ6 (Micro E-mini Nasdaq-100, dic-2026); vencimiento 18-dic-2026 (TradingView); roll típico alrededor de la semana previa (verificar fecha de roll en CME). Se usa el NQ (contrato E-mini) como referencia; mismo nivel en puntos."},
+    {"concepto": "Sesión", "valor": "CME Globex 24 h; día anterior = sesión del jue 19-nov (liquidación 4:00 p. m. ET)"},
+    {"concepto": "Apertura jue 19", "valor": "No disponible (probé: Barchart, TradingView, Investing.com, Reuters)"},
+    {"concepto": "Máximo jue 19", "valor": "No disponible; referencia: Nasdaq Composite +2.1 % y S&P +1.3 % en máximos del día (TheStreet)"},
+    {"concepto": "Mínimo jue 19", "valor": "No disponible"},
+    {"concepto": "Cierre/liquidación jue 19", "valor": "≈26,626 (calculado: -434 pts = -1.63 % a las 4:57 ET, Reuters)"},
+    {"concepto": "Referencia Nasdaq-100 cash cierre", "valor": "26,532.84 (-2.15 %, cotización tardía, investingLive); TE muestra 26,107.84 (-2.21 %): las fuentes discrepan"},
+    {"concepto": "Precio actual (4:57 a. m. ET)", "valor": "≈26,192 (calculado, Reuters)"},
+    {"concepto": "Variación vs cierre previo", "valor": "-1.63 % (4:57 ET) → -1.4 % (5:26 ET) → -1.10 % (5:40 ET) (Reuters / Investing / TipRanks)"},
+    {"concepto": "Dato a las 7:00 ET exacto", "valor": "No disponible (la última cotización verificada es de 5:40 ET)"},
+    {"concepto": "Otras referencias", "valor": "S&P 500 cash 7,175.83 (máx del jueves 7,415.64; mínimo de cierre desde abril; el mínimo del 5-nov de 7,350 quedó roto); futuros S&P -0.38 % a -0.76 %, Dow ~±0.2 %."}
+  ],
+  "escenarios": [
+    {"tipo": "Alcista", "texto": "Rebote técnico tras el mayor reverso desde 2022 (de +1 % a -2 % en el S&P), VIX ~29 y acciones muy sobrevendidas (Nvidia RSI ~20); estacionalidad de OpEx/semana de Thanksgiving; ANT sostiene sobre su precio de OPI. Condición a confirmar: que el MNQ recupere y sostenga el área del cierre previo (~26,600 en NQ) y que el 10 años no vuelva a 5.05 % o más."},
+    {"tipo": "Bajista", "texto": "Continuación de la venta de IA (ANT -6 %, chips, hiperescalares), DXY empujando 104.00 y USD/JPY cerca de 160, retórica de alzas de 50 pb de Waller/Goolsbee, vencimiento mensual de opciones con gamma negativa. Condición: pérdida de los mínimos premarket y nuevos mínimos con volumen."},
+    {"tipo": "Neutral", "texto": "Rango amplio por OpEx y pocos datos de EE. UU.; lateral hasta el sentimiento de Michigan (9:00 a. m. CDMX)."}
+  ],
+  "agenda": [
+    {"hora": "7:25 a. m. CDMX (8:25 a. m. ET)", "evento": "Fed Waller, palabras de bienvenida en College Fed Challenge"},
+    {"hora": "8:30 a. m. CDMX (9:30 a. m. ET)", "evento": "Apertura de Wall Street"},
+    {"hora": "9:00 a. m. CDMX (10:00 a. m. ET)", "evento": "U. de Michigan, sentimiento del consumidor final (nov)"},
+    {"hora": "11:15 a. m. CDMX (12:15 p. m. ET)", "evento": "Fed Cook, la economía de EE. UU. en contexto global"},
+    {"hora": "Durante el día", "evento": "Vencimiento mensual de opciones; titulares de Irán/Ormuz y de ANT; resultados de BJ's antes de la apertura (ningún componente del S&P 500 reporta hoy)"},
+    {"hora": "Miércoles 25-nov, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PCE de octubre (siguiente evento de alto impacto)"}
+  ],
+  "conclusion": "Ayer el dólar cerró en máximos de 19 meses y el Nasdaq-100 perdió ~2.2 % tras revertir un alza de ~2 %, en una rotación vinculada a la OPI de Anthropic. Hoy el DXY está plano cerca de 103.9 y los futuros caen ~1.1 %-1.6 %, impulsados más por IA que por dólar o rendimientos. Vigilar: apertura 9:30 ET y reacción a Waller (8:25 ET), DXY 104.00, 10 años cerca de 5.00 %, USD/JPY 160, y el área de ~26,600 (cierre previo calculado del NQ). Sin señales de compra o venta sin confirmación del precio; el panorama cambia rápido con Fed y titulares.",
+  "fuentes": [
+    {"titulo": "investingLive - Americas FX wrap 19 Nov", "url": "https://investinglive.com/news/investinglive-americas-fx-news-wrap-19-nov-inflation-worries-sink-stocks/"},
+    {"titulo": "The Wall Street Republic - Daily Recap 19-nov", "url": "https://thewallstreetrepublic.substack.com/p/anthropic-closes-at-9717-s-and-p"},
+    {"titulo": "TheStreet Pro - Anthropic Pops, but the S&P 500 Drops", "url": "https://pro.thestreet.com/market-commentary/anthropic-pops-but-the-sp-500-drops"},
+    {"titulo": "Reuters (vía finwire) - Wall St futures slip as Anthropic debut fails to reassure", "url": "https://finwire.io/news/economy-news/wall-st-futures-slip-as-anthropic-debut-fails-to-reassure-ai-investors"},
+    {"titulo": "Trading Economics - United States Dollar (DXY)", "url": "https://tradingeconomics.com/united-states/currency"},
+    {"titulo": "Trading Economics - US stock market", "url": "https://tradingeconomics.com/united-states/stock-market"},
+    {"titulo": "FXStreet - DXY takes a breather after 19-month high", "url": "https://www.fxstreet.com/news/us-dollar-takes-a-breather-after-rally-to-19-month-high-202611191423"},
+    {"titulo": "Strategitz - Global Markets Close 19-nov", "url": "https://strategitz.substack.com/p/global-markets-close-november-19"},
+    {"titulo": "TradeAlmanac - DXY", "url": "https://tradealmanac.com/en/markets/us/indices/dxy"},
+    {"titulo": "CNBC - Treasury yields 19-nov", "url": "https://www.cnbc.com/2026/11/19/us-treasury-yields-investors-us-economy.html"},
+    {"titulo": "Investing.com - Premarket movers 20-nov", "url": "https://www.investing.com/news/stock-market-news/premarket-movers-anthropic-slides-after-debut-intuit-tumbles-on-mailchimp-sale-5041130"},
+    {"titulo": "TipRanks - Stock Market Today, Nov. 20", "url": "https://www.tipranks.com/news/stock-market-today-nov-20-futures-wobble-as-anthropic-ipo-fails-to-lift-sentiment"},
+    {"titulo": "CNBC - Anthropic premarket", "url": "https://cnbc.com/2026/11/20/anthropic-stock-ai-amd-nvidia.html"},
+    {"titulo": "TD Economics - Upcoming releases Nov 16-20", "url": "https://economics.td.com/domains/economics.td.com/documents/reports/bottom-line/tables/2026-11-13/upcoming.htm"},
+    {"titulo": "StockHub - Calendario semanal", "url": "https://stockhub.kr/en/insights/macro-weekly-20261116"},
+    {"titulo": "Finance Calendar - UMich final nov", "url": "https://www.financecalendar.com/event/us-university-of-michigan-consumer-sentiment-november-2026/"},
+    {"titulo": "TradingView - MNQZ2026", "url": "https://www.tradingview.com/symbols/CME_MINI-MNQZ2026"}
+  ],
+  "aviso": "Reporte informativo; no constituye asesoría financiera.",
+  "mapa": {
+    "titulo": "DXY: niveles a vigilar",
+    "actualizado": "Precio de las 7:00 a. m. ET (Trading Economics)",
+    "precio": {"valor": 103.88, "etiqueta": "Ahora ≈103,88"},
+    "niveles": [
+      {"valor": 104.00, "etiqueta": "104,00 Nivel psicológico que el DXY empuja"},
+      {"valor": 103.97, "etiqueta": "103,97 Máximo del jueves"},
+      {"valor": 103.90, "valor2": 103.95, "etiqueta": "103,90–103,95 Cierre del jueves"},
+      {"valor": 103.81, "etiqueta": "103,81 Cierre del miércoles"},
+      {"valor": 103.65, "valor2": 103.60, "etiqueta": "103,60–103,65 Mínimo intradía del jueves (~)"}
+    ],
+    "flechas": [],
+    "nota": "Dibujo de niveles tomados del reporte; no es un pronóstico ni una señal. Las flechas muestran hacia dónde apuntan los niveles, no su probabilidad."
+  }
+}
