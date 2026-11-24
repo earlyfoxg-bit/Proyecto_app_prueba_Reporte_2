@@ -1,0 +1,100 @@
+{
+  "titulo": "Reporte DXY y MNQ - 2026-11-23",
+  "fecha": "2026-11-23",
+  "generado": "Lunes 23-nov-2026, 6:00 a. m. CDMX (7:00 a. m. ET). CDMX = ET menos 1 hora. Apertura de Nueva York: 8:30 a. m. CDMX (9:30 a. m. ET).",
+  "resumen": "El viernes 20 hubo una liquidación fuerte de IA y chips (Nasdaq-100 -5.6 %, NQZ26 -5.14 %) con el dólar casi plano cerca de su máximo de 19 meses y los rendimientos a la baja. Hoy los futuros rebotan cerca de +3 % mientras el DXY cede ~0.2 % (~103.63). El mercado sigue descontando un alza de la Fed en diciembre (~93 %).",
+  "dxy": {
+    "texto": "Lectura tomada: hoy es lunes, así que ayer fue domingo 22 (mercado cerrado) y se analiza el viernes 20 como última sesión completa. VIERNES 20: DXY abrió en 103.89, máximo 103.95, mínimo 103.58 y cerró en 103.81 (-0.08 %). HOY (lun 23, ~1:47 a. m. ET): ~103.63 (-0.2 %), único dato de hoy, citado por un resumen de GGMA que lo atribuye a Reuters. Qué lo movió: el DXY venía de cuatro semanas al alza por apuestas de alzas de la Fed (actas del FOMC con amplio apoyo a más alzas, comentarios de Cook y Waller), demanda de refugio por la caída de acciones de IA y fuerte entrada de capital extranjero a activos de EE. UU. (TIC). El euro explica buena parte del avance (EUR/USD cerca de 1.10, mínimo de 19 meses). Hoy el dólar cede porque se descartó un alza de 50 pb en diciembre, hay apetito por riesgo en el rebote y el secretario del Tesoro Bessent advirtió el domingo sobre un exceso de endurecimiento de la Fed.",
+    "datos": [
+      {"concepto": "Viernes 20: apertura", "valor": "103.89 (Investing.com)"},
+      {"concepto": "Viernes 20: máximo", "valor": "103.95"},
+      {"concepto": "Viernes 20: mínimo", "valor": "103.58"},
+      {"concepto": "Viernes 20: cierre", "valor": "103.81 (-0.08 %). Otras fuentes: 103.84 (Stocktwits) y 103.74 (Trading Economics); difieren por centésimas"},
+      {"concepto": "Domingo 22 (ayer)", "valor": "Mercado cerrado"},
+      {"concepto": "Hoy ~1:47 a. m. ET", "valor": "~103.63 (-0.2 %), un resumen de GGMA que atribuye el dato a Reuters"},
+      {"concepto": "Hoy 7:00 a. m. ET", "valor": "No disponible (probé: Investing.com, Trading Economics, FXStreet)"},
+      {"concepto": "Hoy: apertura, máximo y mínimo", "valor": "No disponible (probé: Investing.com, FXStreet, Trading Economics)"},
+      {"concepto": "Máximo de 19 meses", "valor": "103.97 el jueves 19 (FXStreet)"}
+    ]
+  },
+  "noticias": {
+    "ayer": "DOMINGO 22: Bessent (CBS) dijo que la Fed corre el riesgo de apretar de más; Bill Ackman coincidió. China bajó el requisito de margen y fondos estatales compraron un récord de ETF; Corea del Sur preparó un fondo de estabilización bursátil. Ataques a buques cerca de Ormuz en su nivel más alto desde que empezó la guerra EE. UU.-Irán; los hutíes dijeron haber atacado la refinería saudí de Rabigh (sin daños confirmados). Bitcoin tocó 55,081 el sábado (mínimo desde sept. 2024) y cerró la semana sobre 61,000. No hubo datos económicos de EE. UU. VIERNES 20 (contexto): Reuters reportó que el personal de cumplimiento de la SEC examina posibles problemas contables de Nvidia; NVDA -14.01 % a 125.53, su peor día desde enero de 2025, séptima caída seguida. Anthropic (ANT) cayó 8.5 % a 88.91 (precio de salida a bolsa: 83). SOX -10.7 %; S&P 500 y Dow entraron en corrección; el Nasdaq Composite quedó negativo en el año. Cook se mostró escéptica de que el alza de septiembre baste para cambiar la trayectoria de la inflación. Probabilidad de alza en diciembre ~92-93 % (CME FedWatch / swaps); el escenario de 50 pb quedó fuera de precio. Rendimientos del Tesoro (cierre 20 nov): 2 años 4.65-4.66 %, 10 años 4.94-4.95 %, 30 años 5.33 %. El 2 años cayó 20 pb en la semana (mayor caída semanal desde agosto 2025), con baja de más de 15 pb solo el viernes por demanda de refugio. El 10 años venía de 5.15 % la semana previa. Jueves 19 (contexto): solicitudes iniciales de desempleo 203K vs 197K esperado; continuas 1.763M vs 1.710M; Philadelphia Fed 6.3 vs 20.0 esperado (previo 20.9).",
+    "hoy": "Futuros al alza tras la venta del viernes; futuros del Tesoro -0.2 % en Asia (menos refugio). Oro +2.5 % a ~3,626; Brent ~92.41; Bitcoin ~61.4K. Europa: PMI flash de la zona euro sin impresionar y PMI de servicios de Reino Unido cayó sorpresivamente a ~52 (titulares de FXStreet/TMGM). Fed: Bessent presiona sobre el riesgo de sobre-endurecimiento; el mercado sigue descontando alza de 25 pb en diciembre (reunión 8-9 dic). Rendimientos de hoy a las 7:00 a. m. ET: No disponible (probé: Investing.com, Reuters/Bloomberg vía resúmenes, FRED). Reportes indican rendimientos poco cambiados hoy."
+  },
+  "eventos_usd": [
+    {"bloque": "Ayer", "hora": "Domingo 22", "evento": "Sin eventos USD de impacto medio/alto", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "n/a"},
+    {"bloque": "Ayer", "hora": "9:00 a. m. CDMX (10:00 a. m. ET), vie 20", "evento": "Sentimiento Univ. de Michigan final nov", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "No disponible", "real": "No disponible (probé: Infoquest, FXStreet, Investing). Reacción observada: DXY casi plano (-0.08 %); MNQ -5 % por la venta de IA (asociación, no causalidad)"},
+    {"bloque": "Ayer", "hora": "Hora no confirmada, vie 20", "evento": "Discurso de la gobernadora Cook (Fed)", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "No disponible", "real": "Escéptica de que un alza baste. Reacción observada: rendimientos bajaron por refugio"},
+    {"bloque": "Hoy", "hora": "Hasta las 7:00 a. m. ET", "evento": "Ningún evento USD de impacto medio/alto publicado antes de las 7:00 a. m. ET", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "n/a"},
+    {"bloque": "Pendiente", "hora": "8:45 a. m. CDMX (9:45 a. m. ET)", "evento": "S&P Global PMI manufacturero flash nov", "impacto": "Medio (clasificación propia)", "anterior": "54.9", "pronostico": "54.6", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "8:45 a. m. CDMX (9:45 a. m. ET)", "evento": "S&P Global PMI de servicios flash nov", "impacto": "Medio (clasificación propia)", "anterior": "56.1", "pronostico": "55.8", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "8:45 a. m. CDMX (9:45 a. m. ET)", "evento": "S&P Global PMI compuesto flash nov", "impacto": "Medio (clasificación propia)", "anterior": "55.9", "pronostico": "55.6", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "12:00 p. m. CDMX (1:00 p. m. ET)", "evento": "Subasta de notas del Tesoro a 2 años ($69 mil millones)", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "No disponible", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "3:00 p. m. CDMX (4:00 p. m. ET)", "evento": "Discurso de John Williams (Fed de Nueva York)", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "No disponible", "real": "Pendiente"}
+  ],
+  "nota_eventos": "No se pudo abrir ForexFactory ni Investing.com con fechas vigentes; los horarios vienen de Infoquest, GGMA y FXStreet y la importancia es clasificación propia. También hoy, 7:30 a. m. CDMX (8:30 a. m. ET): índice de actividad nacional de la Fed de Chicago (impacto bajo, fuera del filtro). Próximos días: martes 24 ADP semanal (~7:15 a. m. CDMX / 8:15 a. m. ET) y confianza del consumidor Conference Board (9:00 a. m. CDMX / 10:00 a. m. ET); miércoles 25 (8:30 a. m. ET): PCE de octubre (alto; consenso +0.3 % m/m vs 0.5 % previo y 3.8 % a/a vs 3.6 %), PIB 3T 2.ª estimación, bienes duraderos y solicitudes de desempleo; jueves 26 mercado cerrado (Acción de Gracias); viernes 27 sesión corta hasta la 1:00 p. m. ET.",
+  "nasdaq": {
+    "texto": "Viernes 20: el Nasdaq-100 cayó ~5.6 % (QQQ) y el NQZ26 5.14 %. El DXY casi no se movió (-0.08 %) y los rendimientos bajaron con fuerza, así que ni el dólar ni los rendimientos explican la caída: la relación no fue clara. El motor fue específico del sector (probe de la SEC a Nvidia, salida a bolsa de Anthropic, dudas de financiamiento de IA, temor a más alzas).",
+    "puntos": [
+      "Durante la semana sí hubo asociación entre rendimientos altos (10 años ~5.15 %), dólar fuerte y presión en tecnología; el viernes se rompió por la huida a refugio.",
+      "Hoy (premercado): el NDX sube ~2.8-3.1 % mientras el DXY baja ~0.2 % y los rendimientos están poco cambiados: un patrón consistente con desarme de refugio y rebote técnico, no con una señal macro nueva. Es una asociación observada, no causalidad."
+    ]
+  },
+  "niveles": [
+    {"concepto": "Contrato", "valor": "NQZ6/MNQZ6 (diciembre; vence 18 dic, el roll habitual ocurre ~una semana antes: no verificado con CME). Los % de Barchart corresponden a la liquidación del cierre regular; la sesión Globex de 24 h no se pudo reconstruir."},
+    {"concepto": "MNQ/NQ (Z6) viernes 20: apertura, máximo, mínimo y cierre", "valor": "No disponible (probé: Barchart, TradingView, Yahoo, Investing, CNBC)"},
+    {"concepto": "NQZ26 variación viernes 20", "valor": "-5.14 %"},
+    {"concepto": "E-mini S&P (ESZ26) viernes 20", "valor": "-3.34 %"},
+    {"concepto": "S&P 500 viernes 20", "valor": "6,910.39 (-3.70 %)"},
+    {"concepto": "Dow Jones viernes 20", "valor": "48,147.33 (-1.93 %)"},
+    {"concepto": "Nasdaq Composite viernes 20", "valor": "22,617.73 (-5.28 %)"},
+    {"concepto": "Nasdaq-100 (QQQ) viernes 20", "valor": "No disponible en puntos (-5.61 %)"},
+    {"concepto": "VIX", "valor": "Discrepancia: 35.89 (Investing) vs 29.84 (finwire, retrasado)"},
+    {"concepto": "Hoy 7:00 a. m. ET: precio exacto del MNQ", "valor": "No disponible"},
+    {"concepto": "Futuros del Nasdaq-100 hoy vs cierre previo", "valor": "+2.8 % (~1:47 a. m. ET, GGMA), +2.9 % (1:20 a. m. ET, Investing.com, 740 puntos), +3.1 % (antes de la apertura, Cointelegraph). Con esos 740 puntos el cierre previo del NQ sería ~25,500 (calculado, aproximado ±500; no usar para operar)."}
+  ],
+  "escenarios": [
+    {"tipo": "Alcista", "texto": "PMI flash más débiles que lo esperado (compuesto bajo 55.6), subasta de 2 años bien recibida, rendimientos y DXY a la baja y estabilización en NVDA/ANT; el rebote del premercado se extiende. Históricamente los rallies de apertura se revierten en parte con frecuencia."},
+    {"tipo": "Bajista", "texto": "PMI fuertes (sobre todo servicios) que suban la apuesta de alza y los rendimientos, DXY sobre 103.97, nuevos titulares sobre la SEC/Nvidia o ruptura del rebote; el rebote se desvanece."},
+    {"tipo": "Neutral", "texto": "PMI en línea, rango amplio y volátil esperando el PCE del miércoles; volatilidad del Nasdaq-100 en máximos desde abril de 2020 (Bloomberg)."}
+  ],
+  "agenda": [
+    {"hora": "8:30 a. m. CDMX (9:30 a. m. ET)", "evento": "Apertura de Wall Street"},
+    {"hora": "8:45 a. m. CDMX (9:45 a. m. ET)", "evento": "S&P Global PMI flash de noviembre (manufacturero, servicios y compuesto)"},
+    {"hora": "12:00 p. m. CDMX (1:00 p. m. ET)", "evento": "Subasta de notas del Tesoro a 2 años ($69 mil millones)"},
+    {"hora": "3:00 p. m. CDMX (4:00 p. m. ET)", "evento": "Discurso de John Williams (Fed de Nueva York)"},
+    {"hora": "Durante el día", "evento": "Resultados corporativos de peso del Nasdaq-100 hoy: no se encontraron"},
+    {"hora": "Miércoles 25-nov, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PCE de octubre (alto impacto)"}
+  ],
+  "conclusion": "El viernes cerró en pánico (S&P y Dow en corrección, NQ -5.14 %) con el dólar fuerte pero plano; hoy hay rebote de ~3 % en futuros y el DXY retrocede. La sesión de NY se jugará con los PMI de las 8:45 a. m. CDMX, la subasta de 2 años y el tono de la Fed (Williams, alza de diciembre descontada ~93 %). Vigila DXY 103.97 y 103.60, rendimientos del 10 años cerca de 4.95 % y 5.15 %, y las reacciones del precio en los extremos de Globex antes de actuar; sin confirmación del precio no hay señal y nada de esto promete resultados.",
+  "fuentes": [
+    {"titulo": "Stocks Meltdown as AI Trade Unravels (Barchart/TradingView)", "url": "https://www.tradingview.com/news/barchart:d09ff1028094b:0-stocks-meltdown-as-ai-trade-unravels/"},
+    {"titulo": "Nasdaq Futures Rebound as Asia Props Up Stocks (GGMA)", "url": "https://gfxfts.substack.com/p/nasdaq-futures-rebound-as-asia-props"},
+    {"titulo": "Futures bounce after AI selloff (Investing.com)", "url": "https://za.investing.com/news/economy-news/futures-bounce-after-ai-selloff-bessent-on-nvidia-probe--whats-moving-markets-4591507"},
+    {"titulo": "Bitcoin Price Rises With Stocks Futures (Cointelegraph/finwire)", "url": "https://finwire.io/news/crypto-news/bitcoin-price-rises-with-stocks-futures-after-55000-macro-lows"},
+    {"titulo": "US S&P Global PMI expected to ease in November (FXStreet/TMGM)", "url": "https://www.tmgm.com/en/analysis/market-news/article/us-sp-global-pmi-expected-to-ease-in-november-202611231008"},
+    {"titulo": "US Dollar Index breather after 19-month high (FXStreet)", "url": "https://www.fxstreet.com/news/us-dollar-takes-a-breather-after-rally-to-19-month-high-202611191423"},
+    {"titulo": "The Weekly Spread: Treasury yields and the dollar (Stocktwits)", "url": "https://stocktwits.com/news-articles/markets/equity/the-weekly-spread-what-shaped-us-treasury-yields-and-the-dollar-this-week-1/cNbmPyOR91X"},
+    {"titulo": "U.S. Treasury Yield Curve (streetstats)", "url": "https://streetstats.finance/rates/treasuries"},
+    {"titulo": "US Dollar Index Historical Data (Investing.com)", "url": "https://www.investing.com/indices/usdollar-historical-data"},
+    {"titulo": "Closing Look - Friday, November 20, 2026 (Capp Notes)", "url": "https://cappnotes.substack.com/p/closing-look-friday-november-20-2026"},
+    {"titulo": "Markets' November Nightmare (Schwab)", "url": "https://www.schwab.com/learn/story/market-volatility"},
+    {"titulo": "World Economic Calendar (Infoquest)", "url": "https://www.infoquest.co.th/2026/682153"},
+    {"titulo": "US futures attempt rebound (ThinkMarkets)", "url": "https://www.thinkmarkets.com/en/market-news/us-futures-attempt-a-rebound-after-last-weeks-nvidia-led-sell-off/"}
+  ],
+  "aviso": "Reporte informativo; no constituye asesoría financiera.",
+  "mapa": {
+    "titulo": "DXY: niveles a vigilar",
+    "actualizado": "Precio de ~1:47 a. m. ET (GGMA, atribuido a Reuters)",
+    "precio": {"valor": 103.63, "etiqueta": "Ahora ≈103,63"},
+    "niveles": [
+      {"valor": 103.97, "etiqueta": "103,97 Máximo de 19 meses (jueves 19)"},
+      {"valor": 103.95, "etiqueta": "103,95 Máximo del viernes"},
+      {"valor": 103.89, "etiqueta": "103,89 Apertura del viernes"},
+      {"valor": 103.81, "etiqueta": "103,81 Cierre del viernes"},
+      {"valor": 103.60, "valor2": 103.58, "etiqueta": "103,58–103,60 Mínimo del viernes / nivel a vigilar"}
+    ],
+    "flechas": [],
+    "nota": "Dibujo de niveles tomados del reporte; no es un pronóstico ni una señal. Las flechas muestran hacia dónde apuntan los niveles, no su probabilidad."
+  }
+}
