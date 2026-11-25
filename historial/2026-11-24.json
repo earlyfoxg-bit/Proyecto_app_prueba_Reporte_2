@@ -1,0 +1,96 @@
+{
+  "titulo": "Reporte DXY y MNQ - 2026-11-24",
+  "fecha": "2026-11-24",
+  "generado": "Martes 24-nov-2026, 6:00 a. m. CDMX (7:00 a. m. ET). CDMX = ET menos 1 hora. Apertura de Nueva York: 8:30 a. m. CDMX (9:30 a. m. ET).",
+  "resumen": "El DXY cerró ayer en máximos de 19 meses (≈104.3) junto con un rally del Nasdaq-100 de +6.9 % por el regreso de Jensen Huang a Nvidia. Hoy, antes de las 7:00 a. m. ET, ambos corrigen (DXY ≈ -0.3 %, NQ ≈ -1.2 % a -2 %). El mercado da ~95-96 % a un alza de 25 pb de la Fed el 9-dic.",
+  "dxy": {
+    "texto": "Lectura tomada: hoy es martes 24-nov-2026; ayer = lunes 23-nov y hoy = desde las 00:00 CDMX hasta ~7:00 a. m. ET. AYER: dólar más fuerte (+0.48 %). Empezó la semana cerca de 103.7, subió cuando Nvidia reinstaló a Huang (mejoraron las perspectivas de crecimiento de EE. UU.) y se sumaron las apuestas de alza de la Fed: Newsquawk reporta 25.6 pb de alza descontados para diciembre (antes 23.9) y 55.8 pb para marzo. Cayó el euro (EUR/USD ≈1.088 según Newsquawk) y el yen, mientras el dólar australiano se defendió. HOY: ligera corrección (≈ -0.3 %). El DXY retrocede desde el máximo de 19 meses; EUR/USD ≈1.0953 y USD/JPY ≈159.2 (Trading Economics). No encontré un catalizador de datos del USD; se mueve con el tono de riesgo. Contexto Fed: el rango vigente es 3.75 %-4.00 % (FXStreet/Primexbt; Trading Economics lista 4.00 %). El mercado da ~95-96 % a un alza de 25 pb el 9-dic y el resto a 50 pb (Trading Economics); también se espera otra alza en enero. Los datos de las ~7:00 a. m. ET son aproximados: distintas fuentes difieren por unos puntos.",
+    "datos": [
+      {"concepto": "Apertura (ayer)", "valor": "No disponible (probé: Trading Economics, Investing, Babypips, Newsquawk)"},
+      {"concepto": "Apertura (hoy)", "valor": "No disponible (mismas fuentes)"},
+      {"concepto": "Máximo (ayer)", "valor": "Máximo de 19 meses; nivel exacto no disponible (≈104.3-104.4 según cierre)"},
+      {"concepto": "Máximo (hoy)", "valor": "No disponible"},
+      {"concepto": "Mínimo (ayer)", "valor": "≈103.7 temprano en la sesión (Trading Economics, aproximado)"},
+      {"concepto": "Mínimo (hoy)", "valor": "No disponible"},
+      {"concepto": "Cierre de ayer", "valor": "104.34 (+0.48 %) según Babypips; 104.32 según Trading Economics; ≈104.26 implícito en Investing"},
+      {"concepto": "Actual hoy (~7:00 a. m. ET)", "valor": "≈103.92-103.98 (-0.33 % a -0.35 %) según Investing y Trading Economics"}
+    ]
+  },
+  "noticias": {
+    "ayer": "Nvidia reinstaló a Jensen Huang como CEO tras presión de la Casa Blanca; NVDA subió 31.5 % y el contrato NQ llegó al límite de +7 % en el premercado (Newsquawk). Sector tecnología +9.0 %. Rendimientos del Tesoro (liquidación, Newsquawk): 2 años 4.672 % (+2.3 pb), 5 años 4.740 %, 10 años 4.928 % (-2.2 pb), 30 años 5.302 %. La curva se aplanó: el frente corto subió por más apuestas de alza y el largo cedió. Subasta de 2 años por USD 69 mil millones con demanda sólida (adjudicó 0.3 pb por debajo del nivel esperado); la demanda indirecta quedó bajo su promedio. Petróleo a la baja: WTI 80.17 y Brent 89.37 (liquidación). Trump dijo que favorece retomar acciones militares contra Irán después de año nuevo si no hay acuerdo. El viernes previo (20-nov) hubo una venta fuerte: el S&P 500 entró en corrección, el Nasdaq cerró 19.8 % bajo su máximo de octubre y el VIX superó 39 (Newsquawk).",
+    "hoy": "NVDA cae 4-5 % en premercado tras subir cerca de 1 billón de dólares en valor; Goldman Sachs dice que el regreso de Huang no cierra los riesgos. Siguen la investigación de la fiscalía de California y la intención de investigar de demócratas del Senado; Semafor reporta que el gobierno planea poner a Megaspeed en lista negra comercial. Rendimiento a 10 años ≈4.89 % (-1.5 pb), 5 años ≈4.71 %, 30 años ≈5.28 %, 3 meses ≈4.28 % (Investing). Rendimiento a 2 años de hoy: No disponible (probé: Investing, Trading Economics, Newsquawk). Resultados corporativos: Dollar Tree superó expectativas (+~11 % premercado); HPE cae ~9.6 % por advertencia de márgenes; Agilent sube; Insmed sube por compra de Sanofi (USD 41 mil millones). Anthropic (ANT) retrocede ~4 % en premercado, según Yahoo Finance y Rallies."
+  },
+  "eventos_usd": [
+    {"bloque": "Ayer", "hora": "8:45 a. m. CDMX (9:45 a. m. ET), horario habitual", "evento": "PMI manufacturero flash S&P Global (nov)", "impacto": "Medio (clasificación propia)", "anterior": "54.9", "pronostico": "54.5", "real": "54.5. Reacción DXY / MNQ: poca reacción; el día lo dominó NVDA"},
+    {"bloque": "Ayer", "hora": "8:45 a. m. CDMX (9:45 a. m. ET), horario habitual", "evento": "PMI de servicios flash (nov)", "impacto": "Medio (clasificación propia)", "anterior": "56.1", "pronostico": "55.6", "real": "54.7 (por debajo; compuesto 54.6 vs 55.9). Reacción DXY / MNQ: poca reacción"},
+    {"bloque": "Ayer", "hora": "Hora no verificada (~1:00 p. m. ET habitual)", "evento": "Subasta de notas a 2 años (USD 69 mil millones)", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "No disponible", "real": "Demanda sólida. Reacción DXY / MNQ: sin efecto separable"},
+    {"bloque": "Ayer", "hora": "≈3:25 p. m. CDMX (≈4:25 p. m. ET)", "evento": "Fed: Williams (votante)", "impacto": "Medio (clasificación propia)", "anterior": "—", "pronostico": "—", "real": "Dijo que los fundamentos del crecimiento fuerte enfrentan retos y que se avanzó contra la inflación. Reacción DXY / MNQ: posterior al cierre del efectivo; sin efecto claro"},
+    {"bloque": "Hoy", "hora": "Hasta ~7:00 a. m. ET", "evento": "Ningún evento USD de impacto medio o alto publicado en ese lapso", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "n/a"},
+    {"bloque": "Pendiente", "hora": "7:15 a. m. CDMX (8:15 a. m. ET), horario habitual", "evento": "ADP empleo semanal", "impacto": "Medio (clasificación propia)", "anterior": "No disponible (probé: Newsquawk, Trading Economics, Investing)", "pronostico": "No disponible", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "9:00 a. m. CDMX (10:00 a. m. ET)", "evento": "Confianza del consumidor Conference Board (nov)", "impacto": "Medio/alto (clasificación propia); fecha no confirmada por una segunda fuente", "anterior": "No disponible (el único valor hallado era de junio y lo descarté)", "pronostico": "No disponible", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "12:00 p. m. CDMX (1:00 p. m. ET), horario habitual", "evento": "Subasta de notas a 5 años (USD 70 mil millones)", "impacto": "Medio (clasificación propia)", "anterior": "—", "pronostico": "—", "real": "Pendiente"},
+    {"bloque": "Pendiente", "hora": "Hora no disponible", "evento": "Actas de la tasa de descuento de la Fed", "impacto": "Bajo/medio (clasificación propia)", "anterior": "—", "pronostico": "—", "real": "Pendiente"}
+  ],
+  "nota_eventos": "Importancia: Trading Economics no rotuló los colores en la consulta; las clasificaciones son propias (criterio habitual). Las reacciones son asociaciones observadas, no causalidad. Mañana miércoles 25-nov (antes de Thanksgiving): PCE de octubre a las 7:30 a. m. CDMX (8:30 a. m. ET) con PIB del 3T (segunda estimación), solicitudes de desempleo y bienes duraderos (pronóstico de Continuum: +0.2 % total, +0.5 % sin transporte). PCE subyacente anterior: 3.1 % anual (septiembre); pronóstico No disponible. Es la última semana de comentarios de la Fed antes del periodo de silencio previo al FOMC del 9-dic.",
+  "nasdaq": {
+    "texto": "AYER: el Nasdaq-100 cerró en 26,746 (+6.86 %), el Nasdaq Composite +6.51 %, el S&P 500 en 7,237 (+4.73 %) y el Dow +3.0 %; fue el mejor día desde abril de 2025. El VIX bajó a ≈26.6 (calculado desde Investing) desde más de 39 el viernes. La relación habitual inversa con el dólar no apareció: el dólar subió junto con las acciones, y los rendimientos largos bajaron mientras el 2 años subió; el motor fue Nvidia y las apuestas de alza de la Fed, no el dólar. Es una asociación observada, no una causa demostrada.",
+    "puntos": [
+      "HOY: el NQ cede 1.2 %-2 % y el DXY también baja, es decir, ambos se mueven en la misma dirección; el movimiento viene de la toma de ganancias en semiconductores (NVDA, MU, AMD, MRVL -3 % a -5 %) y neoclouds (CoreWeave -5 %).",
+      "Relación poco clara: con una Fed que sube tasas, el dólar y las tasas siguen siendo un viento en contra para el crecimiento tecnológico, pero en estos dos días pesó más el riesgo específico de IA."
+    ]
+  },
+  "niveles": [
+    {"concepto": "Contrato analizado", "valor": "MNQZ6 (diciembre 2026), que por tamaño de contrato replica los puntos del NQZ6; se usaron datos del NQ/NDX porque el MNQ cotiza al mismo nivel. Sesión de referencia: ayer = sesión regular de acciones (9:30 a. m.-4:00 p. m. ET) para el índice; el futuro opera 24 horas en CME Globex. Fecha de roll de diciembre: no verificada en esta consulta."},
+    {"concepto": "MNQZ6 apertura (lun 23-nov)", "valor": "No disponible (probé: Yahoo Finance, Barchart, Investing, Newsquawk, Trading Economics). El historial de Yahoo solo llegó hasta el 13-nov"},
+    {"concepto": "MNQZ6 máximo (lun)", "valor": "No disponible (mismas fuentes). El NQ tocó el límite de +7 % en el premercado (Newsquawk)"},
+    {"concepto": "MNQZ6 mínimo (lun)", "valor": "No disponible (mismas fuentes)"},
+    {"concepto": "MNQZ6 cierre / liquidación (lun)", "valor": "No disponible (mismas fuentes). Referencia: cierre del Nasdaq-100 (índice) = 26,746"},
+    {"concepto": "Cierre del viernes 20-nov (índice)", "valor": "≈25,030 (calculado: 26,746 ÷ 1.0686)"},
+    {"concepto": "Actual ~7:00 a. m. ET (hoy)", "valor": "≈26,297 (CFD Investing, -1.68 %) a ≈26,444 (Yahoo, NQ). Rango por diferencias entre fuentes; no es el último tick verificado"},
+    {"concepto": "Variación vs. cierre previo (~7:00 a. m. ET)", "valor": "≈ -1.2 % a -2.0 %. Según Investing, Yahoo, TipRanks y Business Upturn; la cifra exacta no pudo verificarse"}
+  ],
+  "escenarios": [
+    {"tipo": "Alcista", "texto": "NVDA y los chips estabilizan tras el rally, el ADP y la confianza del consumidor no sorprenden al alza y los rendimientos largos siguen cediendo; el NQ recupera la zona de cierre de ayer (≈26,750 en el índice)."},
+    {"tipo": "Bajista", "texto": "Continúa la toma de ganancias en semiconductores (HPE mostró que los márgenes de IA preocupan), el dólar se estabiliza con apuestas de alza de la Fed, o surgen novedades regulatorias sobre Nvidia (audiencia de Huang el 3-dic)."},
+    {"tipo": "Neutral", "texto": "Rango amplio entre ≈26,300 y 26,750 en espera del PCE de mañana, con el VIX aún elevado (≈28)."}
+  ],
+  "agenda": [
+    {"hora": "7:15 a. m. CDMX (8:15 a. m. ET)", "evento": "ADP empleo semanal"},
+    {"hora": "8:30 a. m. CDMX (9:30 a. m. ET)", "evento": "Apertura de Wall Street"},
+    {"hora": "9:00 a. m. CDMX (10:00 a. m. ET)", "evento": "Confianza del consumidor Conference Board (noviembre)"},
+    {"hora": "12:00 p. m. CDMX (1:00 p. m. ET)", "evento": "Subasta de notas a 5 años (USD 70 mil millones)"},
+    {"hora": "Durante el día", "evento": "Resultados de Dell y ADI según Newsquawk (horario no verificado)"},
+    {"hora": "Miércoles 25-nov, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PCE de octubre, PIB 3T (2.ª estimación), solicitudes de desempleo y bienes duraderos"}
+  ],
+  "conclusion": "Ayer fue un día de squeeze alcista en el Nasdaq-100 (+6.9 %) con el dólar en máximos de 19 meses; hoy se devuelve parte del movimiento antes de la apertura. Vigilar: el cierre del índice ayer (26,746) como referencia superior, la zona de ≈26,300-26,450 de la apertura previa, el ADP a las 7:15 a. m. CDMX, la confianza del consumidor a las 9:00 a. m. CDMX y la subasta de 5 años a las 12:00 p. m. CDMX. Sin confirmación del precio no hay señal; con volatilidad tan alta, el riesgo por operación importa más que la dirección. Los niveles exactos del MNQ de ayer no pudieron verificarse y deben confirmarse en la plataforma.",
+  "fuentes": [
+    {"titulo": "Newsquawk: US Market Wrap 23-nov", "url": "https://www.newsquawk.com/headlines/newsquawk-us-market-wrap---stocks-surge-as-nvda-reinstates-huang-as-ceo"},
+    {"titulo": "Newsquawk: Asia-Pac Opening News 24-nov", "url": "https://www.newsquawk.com/headlines/newsquawk-daily-asia-pac-opening-news---24th-november-2026"},
+    {"titulo": "Trading Economics: DXY", "url": "https://tradingeconomics.com/united-states/currency"},
+    {"titulo": "Trading Economics: índices de EE. UU.", "url": "https://tradingeconomics.com/united-states/stock-market"},
+    {"titulo": "Investing.com: Premarket movers 24-nov", "url": "https://www.investing.com/news/stock-market-news/premarket-movers-nvidia-slips-hpe-semtech-fall-5047572"},
+    {"titulo": "Babypips: Recap 23-nov", "url": "https://babypips.com/news/daily-financial-forex-market-recap-2026-11-23"},
+    {"titulo": "Yahoo Finance: Stock market today 24-nov", "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-rebound-090614276.html"},
+    {"titulo": "Business Upturn: futuros 24-nov", "url": "https://businessupturn.com/usa/money/us-markets/us-stock-futures-turn-lower-as-nasdaq-100-drops-0-9-ahead-of-wall-street-open/"},
+    {"titulo": "Rallies.ai: futuros 24-nov", "url": "https://rallies.ai/news/wall-st-futures-dip-as-chip-stocks-cool-after-nvidia-fueled-rally-69f542cd8aea8cf8"},
+    {"titulo": "FinanceCalendar: calendario 24-nov", "url": "https://www.financecalendar.com/events/category/economic-indicators/day/2026-11-24/"},
+    {"titulo": "FinanceCalendar: PCE 25-nov", "url": "https://www.financecalendar.com/event/us-personal-income-and-outlays-pce-november-2026/"},
+    {"titulo": "Continuum Economics: bienes duraderos", "url": "https://continuumeconomics.com/a/60fc5d9d/preview-due-november-25-us-october-durable-goods-orders-momentum-has-slowed"},
+    {"titulo": "Primexbt: Fed y alza de diciembre", "url": "https://primexbt.com/market-research/fed-speakers-line-up-after-cpi-what-hammack-and-williams-could-signal-for-december/"},
+    {"titulo": "Barchart vía Webull: cierre del lunes previo", "url": "https://www.webull.com/news/15935608114835456"},
+    {"titulo": "Yahoo Finance: historial NQ=F (llega al 13-nov)", "url": "https://finance.yahoo.com/quote/NQ%3DF/history/"}
+  ],
+  "aviso": "Reporte informativo; no constituye asesoría financiera.",
+  "mapa": {
+    "titulo": "DXY: niveles a vigilar",
+    "actualizado": "Precio de ~7:00 a. m. ET (rango 103,92-103,98 según Investing y Trading Economics)",
+    "precio": {"valor": 103.95, "etiqueta": "Ahora ≈103,95"},
+    "niveles": [
+      {"valor": 104.4, "valor2": 104.3, "etiqueta": "104,30–104,40 Máximo de 19 meses (aprox.)"},
+      {"valor": 104.34, "etiqueta": "104,34 Cierre de ayer (Babypips)"},
+      {"valor": 103.7, "etiqueta": "103,70 Mínimo temprano de ayer (aprox.)"}
+    ],
+    "flechas": [],
+    "nota": "Dibujo de niveles tomados del reporte; no es un pronóstico ni una señal. Las flechas muestran hacia dónde apuntan los niveles, no su probabilidad."
+  }
+}
