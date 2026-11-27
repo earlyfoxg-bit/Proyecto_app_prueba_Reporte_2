@@ -1,109 +1,113 @@
 {
-  "titulo": "Reporte DXY y MNQ - 2026-11-26",
-  "fecha": "2026-11-26",
-  "generado": "Jueves 26-nov-2026, datos hasta las 6:00 a. m. CDMX (7:00 a. m. ET). CDMX = ET menos 1 hora. Hoy es Acción de Gracias: la bolsa y los bonos de EE. UU. están cerrados.",
-  "resumen": "Ayer el DXY cerró en 103.70 (-0.12 %) y el MNQ de diciembre cedió 1.05 % (cierre 25,999.25) tras tocar 25,027.00, con un PCE subyacente de 3.3 % por encima de lo esperado. Hoy no hay sesión regular en Nueva York ni datos de EE. UU.; el DXY cotiza cerca de 103.78 (+0.11 %) y los futuros del Nasdaq-100 avanzan ≈0.3 % con liquidez baja. Los futuros paran a las 12:00 p. m. CDMX y mañana viernes hay sesión acortada.",
+  "titulo": "Reporte DXY y MNQ - 2026-11-27",
+  "fecha": "2026-11-27",
+  "generado": "Viernes 27-nov-2026, 6:04 a. m. CDMX (7:04 a. m. ET). CDMX va 1 hora detrás de Nueva York. Ayer fue Acción de Gracias (EE. UU. cerrado); hoy las acciones operan sesión acortada.",
+  "resumen": "El dólar (DXY) llega al cierre de la semana plano, cerca de 103.7 y debajo de su máximo de 22 meses (104.53 del lunes), mientras el MNQ de diciembre sube cerca de 2.5 % en el premercado (≈26,755) por un rebote tecnológico, sin que el dólar sea el motor. Ayer no hubo sesión de acciones ni datos de EE. UU. Hoy las acciones operan de 8:30 a. m. a 12:00 p. m. CDMX con poca liquidez.",
   "dxy": {
-    "texto": "AYER (miércoles 25): el DXY cerró en 103.70 (-0.12 %), su segunda caída seguida, unos 80 puntos bajo el máximo de 19-20 meses (104.57) de inicio de semana. Por la mañana subió hacia 104 por demanda de refugio ante la caída de acciones de IA y la propuesta de aranceles a 14 socios comerciales; después cedió cuando la bolsa recuperó casi todo y los rendimientos bajaron. Perdió contra yen y franco suizo. El PCE subyacente de octubre (3.3 % anual, sobre 3.2 % esperado) dejó la probabilidad de alza de 25 pb en diciembre en ≈96 % (CME FedWatch), pero el dólar no avanzó con ese dato. HOY (jueves 26, 6:00 a. m. CDMX): cotiza cerca de 103.78 (+0.11 %); con EE. UU. cerrado y liquidez baja el índice se mueve poco: EUR/USD ≈1.0970 y USD/JPY ≈159.30, cerca de la zona donde se ha especulado con intervención en Japón. Son asociaciones observadas, no causalidad. Las fuentes discrepan en el cierre previo: TradingEconomics lo ubica en 103.67 y Getleveraged implica ≈103.82; la diferencia es menor a 0.2 puntos.",
+    "texto": "AYER (jueves 26, feriado en EE. UU.): el dólar no se movió de forma relevante por la poca liquidez; el cierre no está verificado (lecturas entre 103.65 y 103.77). HOY (viernes 27, hasta las 7:00 a. m. ET): amanece ligeramente firme, cerca de 103.745 (CFD de Investing), plano en la semana. La última sesión completa fue el miércoles 25, con cierre en 103.67 (-0.14 %). Sigue +1.7 % en noviembre y ≈+5.7 % en 2026. El lunes 23 tocó 104.53 (máximo desde marzo de 2025) y devolvió ese avance al día siguiente. Factores: apuestas a un alza de la Fed en diciembre cercanas a 99 % (CME FedWatch) tras un PCE subyacente más alto de lo esperado, un PIB del T3 revisado a 4.3 % y un Beige Book con inflación persistente; EUR/USD estable en ≈1.097 tras el anuncio de Hernández de Cos como próximo presidente del BCE (desde el 7-feb-2027); USD/JPY ≈159.2-159.4, con cautela por posible intervención cerca de 160 y el IPC de Tokio de noviembre (resultado no verificado); el Banco de Corea subió 25 pb a 3.25 %. No encontré OHLC del jueves tras revisar Investing.com, Barchart, FXStreet y Reuters/CNBC. Fuentes del miércoles: Investing.com 103.67; otras dan 103.666 (Gate) y 103.71 (CappNotes).",
     "datos": [
-      {"concepto": "AYER mié 25-nov: apertura", "valor": "No disponible (probé: TradingEconomics, FXStreet, Getleveraged, RTTNews)"},
-      {"concepto": "AYER mié 25-nov: máximo", "valor": "cerca de 104.00 (sin cifra exacta verificada)"},
-      {"concepto": "AYER mié 25-nov: mínimo", "valor": "cerca de 103.50 (sin cifra exacta verificada)"},
-      {"concepto": "AYER mié 25-nov: cierre", "valor": "103.70 (-0.12 %)"},
-      {"concepto": "HOY jue 26-nov, 6:00 a. m. CDMX (7:00 a. m. ET): apertura", "valor": "No disponible (mismas fuentes)"},
-      {"concepto": "HOY jue 26-nov: máximo", "valor": "No disponible"},
-      {"concepto": "HOY jue 26-nov: mínimo", "valor": "No disponible"},
-      {"concepto": "HOY jue 26-nov: actual", "valor": "≈103.78 (+0.11 %)"},
-      {"concepto": "Máximo de 19-20 meses (inicio de semana)", "valor": "104.57"}
+      {"concepto": "Mié 25 (última sesión completa): apertura", "valor": "103.86"},
+      {"concepto": "Mié 25: máximo", "valor": "104.10"},
+      {"concepto": "Mié 25: mínimo", "valor": "103.55"},
+      {"concepto": "Mié 25: cierre", "valor": "103.67 (-0.14 %)"},
+      {"concepto": "AYER jue 26 (feriado EE. UU.): apertura, máximo y mínimo", "valor": "No disponible"},
+      {"concepto": "AYER jue 26: cierre", "valor": "Lecturas 103.65-103.77; cierre no verificado (plano, ≈0 %)"},
+      {"concepto": "HOY vie 27, hasta 7:00 a. m. ET: apertura", "valor": "103.81 (inicio de Asia)"},
+      {"concepto": "HOY vie 27: máximo", "valor": "No disponible"},
+      {"concepto": "HOY vie 27: mínimo", "valor": "No disponible (lecturas 103.67-103.81)"},
+      {"concepto": "HOY vie 27: actual", "valor": "103.745 (CFD Investing, 7:0x ET); +0.14 % vs cierre del jueves del CFD"},
+      {"concepto": "Máximo de 22 meses (lunes 23)", "valor": "104.53"}
     ]
   },
   "noticias": {
-    "ayer": "Ayer el PCE subyacente (3.3 % anual) y un PIB revisado a 4.3 % reforzaron la apuesta por un alza de la Fed en diciembre, mientras los rendimientos bajaron y las acciones de IA se desplomaron y recuperaron. Fed: tasa en 3.75 %-4.00 % tras el alza de septiembre; el mercado asigna ≈96 % a otra alza de 25 pb el 8-9 de diciembre y ≈60 % a una en enero (CME FedWatch). Las minutas del 18-nov mostraron apoyo amplio a seguir endureciendo. Bonos del Tesoro: el 10 años cerró en ≈4.85 % (-6 pb, par yield del Tesoro) y el 2 años en ≈4.61 %-4.65 % según la fuente; los bonos funcionaron como refugio pese al PCE caliente. La subasta de 5 años del martes tuvo demanda débil, según CNBC. Aranceles: el USTR propuso aranceles Sección 301 a 14 economías (hasta 20 % a China adicional al ≈25 % vigente; las fuentes discrepan en la tasa a la UE, 15 % o 20 %). Comentarios hasta el 5-ene-2027 y sin fecha de entrada en vigor. Petróleo: Brent cerró en ≈94.61 dólares (+3.5 %) por ataques a infraestructura saudí y reportes de minas en Ormuz.",
-    "hoy": "EE. UU. cerrado por Acción de Gracias; sin datos de EE. UU. Los bonos también están cerrados (el 10 años ≈4.86 % es indicativo). Europa sube 1.7 %-2.2 % y Asia sube con la caída de rendimientos; los futuros de Nasdaq-100, S&P 500 y Dow avanzan ≈0.3 %. El Banco de Corea subió 25 pb a 3.25 %."
+    "ayer": "Jueves 26: sin datos de EE. UU. ni mercado de bonos (feriado). Titulares: nuevas restricciones de EE. UU. a chips de IA que complican financiamientos de centros de datos en Asia (Bloomberg, vía Investing.com); ataques a infraestructura energética saudí y naviera en Ormuz que mantienen el petróleo alto (WTI ≈US$85-86 de madrugada); Investing.com menciona planes arancelarios más duros contra 14 socios comerciales (no verificado en una segunda fuente); Nvidia, con Jensen Huang reinstalado como CEO, sigue bajo investigaciones y comparece ante comités de la Cámara el 1-dic. Rendimientos del Tesoro: miércoles 25 el 2 años cerró en 4.59 % (-8 pb) y el 10 años en 4.81 % (-9 pb) según The Weekend Spread, otras fuentes dan ≈4.85 %; jueves cerrado, sin liquidación. Subasta de 7 años del miércoles (US$44 mil millones): 4.708 %, con cola de 1.0 pb.",
+    "hoy": "Hasta las 7:00 a. m. ET los futuros de acciones suben con fuerza tras rebotes en Europa (Stoxx 600 ≈+1.8 %), Japón (Nikkei ≈+2.1 %) y China (blue chips ≈+4.2 %). Reuters cita a XTB: la recuperación parece técnica y las dudas sobre el gasto en IA siguen sin resolverse. CME FedWatch: ≈99 % de alza en diciembre; una fuente de mercado sitúa otro alza hacia abril. Rendimientos en premercado: 10 años 4.897 % (Investing.com) o 4.848 % (Asia, Concept Trader), las fuentes discrepan; 2 años ≈4.58 % (calculado)."
   },
   "eventos_usd": [
-    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PCE general, oct, anual", "impacto": "Alto (clasificación propia)", "anterior": "3.6 %", "pronostico": "3.8 %", "real": "3.8 % (+0.3 % mensual)"},
-    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PCE subyacente, oct, anual", "impacto": "Alto (clasificación propia)", "anterior": "3.1 %", "pronostico": "3.2 %", "real": "3.3 % (+0.3 % mensual)"},
-    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PIB 3T, 2.ª estimación, anualizado", "impacto": "Alto (clasificación propia)", "anterior": "3.4 % (TradingEconomics: 3.5 %)", "pronostico": "No disponible (probé: Getleveraged, TradingEconomics, Saxo)", "real": "4.3 %"},
-    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Solicitudes iniciales de desempleo", "impacto": "Medio (clasificación propia)", "anterior": "202K", "pronostico": "200K", "real": "189K"},
-    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Pedidos de bienes duraderos, oct", "impacto": "Medio (clasificación propia)", "anterior": "No disponible (probé: Getleveraged, Longbridge, TradingEconomics)", "pronostico": "0.6 %-0.7 % (fuentes discrepan)", "real": "+0.2 % (núcleo de bienes de capital +0.5 %)"},
-    {"bloque": "Ayer", "hora": "7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Gasto personal real, oct", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "+0.1 %", "real": "0.0 % (ingreso personal +0.7 %)"},
-    {"bloque": "Ayer", "hora": "9:00 a. m. CDMX (10:00 a. m. ET)", "evento": "Ventas de viviendas nuevas, oct", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "650K", "real": "701K (+14.2 %)"},
-    {"bloque": "Ayer", "hora": "1:00 p. m. CDMX (2:00 p. m. ET)", "evento": "Beige Book de la Fed", "impacto": "Medio (clasificación propia)", "anterior": "No aplica", "pronostico": "No aplica", "real": "Crecimiento leve a moderado en 8 de 12 distritos; precios persistentes"},
-    {"bloque": "Hoy", "hora": "Hasta las 6:00 a. m. CDMX (7:00 a. m. ET)", "evento": "Ningún evento USD de impacto medio o alto; feriado en EE. UU.", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "n/a"},
-    {"bloque": "Pendiente", "hora": "Resto de hoy", "evento": "Ningún evento USD de impacto medio o alto. El próximo con horario es la sesión acortada del viernes 27-nov (acciones cierran a la 1:00 p. m. ET, 12:00 p. m. CDMX; bonos 2:00 p. m. ET).", "impacto": "n/a", "anterior": "n/a", "pronostico": "n/a", "real": "Pendiente"}
+    {"bloque": "Ayer", "hora": "Todo el día (jue 26)", "evento": "Feriado de Acción de Gracias: sin eventos USD de impacto medio o alto", "impacto": "n/a", "anterior": "-", "pronostico": "-", "real": "DXY plano; MNQ subió en la sesión nocturna"},
+    {"bloque": "Ayer", "hora": "Contexto mié 25, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PCE subyacente, oct, anual", "impacto": "Alto (clasificación propia)", "anterior": "3.1 %", "pronostico": "3.2 %", "real": "3.3 % (m/m 0.3 %). DXY apenas se movió; 10 años -9 pb; Nasdaq-100 -0.64 %"},
+    {"bloque": "Ayer", "hora": "Contexto mié 25, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PCE general, oct, anual", "impacto": "Alto (clasificación propia)", "anterior": "No disponible", "pronostico": "3.8 %", "real": "3.8 % (m/m 0.3 %). Sin sorpresa"},
+    {"bloque": "Ayer", "hora": "Contexto mié 25, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "PIB T3, 2.ª estimación, anualizado", "impacto": "Alto (clasificación propia)", "anterior": "3.4 % (1.ª estimación)", "pronostico": "No disponible", "real": "4.3 %"},
+    {"bloque": "Ayer", "hora": "Contexto mié 25, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Solicitudes iniciales de desempleo", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "200 mil", "real": "189 mil"},
+    {"bloque": "Ayer", "hora": "Contexto mié 25, 7:30 a. m. CDMX (8:30 a. m. ET)", "evento": "Órdenes de bienes duraderos, oct", "impacto": "Medio (clasificación propia)", "anterior": "No disponible", "pronostico": "+1.1 %", "real": "+0.2 %"},
+    {"bloque": "Ayer", "hora": "Contexto mié 25, ≈1:00 p. m. CDMX (≈2:00 p. m. ET)", "evento": "Beige Book", "impacto": "Medio (clasificación propia)", "anterior": "-", "pronostico": "-", "real": "8 de 12 distritos con crecimiento leve a moderado; precios al alza moderada. Tras los datos, el 10 años cerró -9 pb"},
+    {"bloque": "Hoy", "hora": "Antes de las 7:00 a. m. ET", "evento": "Ningún evento USD de impacto medio o alto verificado", "impacto": "n/a", "anterior": "-", "pronostico": "-", "real": "-"},
+    {"bloque": "Pendiente", "hora": "Resto de hoy", "evento": "Ningún evento USD de impacto medio o alto verificado para hoy (The Weekend Spread y FinanceCalendar no listan datos ni Fed)", "impacto": "n/a", "anterior": "-", "pronostico": "-", "real": "Pendiente"}
   ],
-  "nota_eventos": "Horarios: CDMX = ET menos 1 hora hoy (EE. UU. sin horario de verano). La clasificación de impacto es propia porque las fuentes abiertas no rotularon el color; no pude abrir el calendario de TradingEconomics (la tabla no cargó), ForexFactory ni Investing.com. Reacción observada ayer (asociación, no causalidad): tras el bloque de las 7:30 a. m. CDMX, el Nasdaq-100 llegaba a caer hasta ≈4.7 % y tocaba el -20 % desde su récord, y luego recuperó casi todo; el DXY se movió hacia 104.00 y devolvió la ganancia; los rendimientos bajaron.",
+  "nota_eventos": "El calendario de ForexFactory e Investing.com no abrió en esta sesión; la lista se armó con Reuters, The Weekend Spread, FinanceCalendar e Investing.com. La importancia es clasificación propia. Los horarios del miércoles son los habituales de publicación, no verificados en calendario. Ingreso personal de octubre +0.7 % y gasto +0.3 % (pronósticos no disponibles). Tras el feriado, los siguientes eventos de peso son la comparecencia de Huang el 1-dic, el reporte de empleo de noviembre el 4-dic y la decisión de la Fed el 9-dic (reunión 8-9 dic). Las reacciones son asociaciones observadas, no causalidad.",
   "nasdaq": {
-    "texto": "Ayer el Nasdaq-100 cayó hasta ≈4.7 % y rozó el -20 % desde su récord de cierre de octubre, pero cerró con una baja de ≈0.6 % (el MNQ de diciembre cedió 1.05 % en la sesión Globex), con el dólar y los rendimientos a la baja.",
+    "texto": "Las relaciones entre dólar, rendimientos y Nasdaq son asociaciones observadas, no causalidad. Con el dólar plano en la semana, el movimiento del Nasdaq refleja sobre todo Nvidia/IA y la expectativa de la Fed, no el dólar por sí solo. En la semana (hasta el miércoles) el Composite acumula +4.3 % y el Dow +4.2 %, pero noviembre sigue entre -3 % y -7.3 % en los índices principales.",
     "puntos": [
-      "Índice: el Nasdaq Composite cerró en 23,585.80 (-0.62 %), el S&P 500 en 7,182.78 (-0.25 %) y el Dow en 50,182.95 (+0.33 %). Una referencia CFD del Nasdaq-100 (TradingEconomics) marca 26,175.63 (-0.64 %); no encontré el cierre oficial del índice de contado.",
-      "Quién pesó: Nvidia cayó 3.9 % a 149.30 dólares, Oracle 5.1 %, Amazon 3.1 % y Alphabet 2.1 %; Meta subió 3.4 % y Apple 0.4 %. El VIX cerró entre 26.4 y 28.5 según la fuente.",
-      "Dólar y rendimientos: por la mañana coincidieron PCE caliente, aranceles, ventas de IA, un dólar firme cerca de 104 y un Nasdaq muy débil. En la tarde el 10 años bajó a ≈4.85 % y el dólar devolvió ganancias mientras el índice se recuperó: una asociación consistente con menor presión de tasas, no una prueba de causa.",
-      "Cuando la relación no fue clara: el DXY cerró -0.12 % y el Nasdaq -0.6 %, y los rendimientos bajaron pese a un PCE por encima de lo esperado. El motor dominante fue el sentimiento hacia la IA y los aranceles, no el dólar.",
-      "Hoy (6:00 a. m. CDMX): los futuros avanzan ≈0.3 % con el DXY +0.1 %, un rebote de mercado delgado sin señal clara del dólar."
+      "Martes 24: DXY -0.47 % (103.83), 10 años 4.928 % (-1.6 pb), Composite -1.48 %. Dólar y rendimientos a la baja no sostuvieron al índice; pesó la venta de IA.",
+      "Miércoles 25: DXY -0.14 % (103.67), 10 años 4.81 % (-9 pb), Composite -0.62 % y Nasdaq-100 -0.64 % (llegó a -4.6 % intradía). Relación poco clara: alivio en bonos y dólar, pero dominó el rebote desde mínimos.",
+      "Jueves 26: DXY plano, bonos cerrados, MNQ ≈+2.4 % en Globex (26,100.25 a 26,732). El dólar no cambió; el impulso vino del rebote tecnológico global.",
+      "Viernes 27 (7:00 ET): DXY ≈103.74, 10 años ≈4.85-4.90 %, NQ ≈+2.5 % (≈26,755). Dólar firme y futuros al alza a la vez.",
+      "Referencia: cierre del Nasdaq-100 (cash) del miércoles 26,046.90 (-0.64 %), así que los futuros abren ≈700 puntos arriba."
     ]
   },
   "niveles": [
-    {"concepto": "Contrato analizado", "valor": "MNQZ6 (Micro E-mini Nasdaq-100, diciembre 2026); los niveles del NQ valen igual en puntos para el MNQ (2 dólares por punto). MNQZ6 es el activo: 4.35 millones de contratos contra 11,455 del MNQH7 (marzo 2027); el vencimiento es el tercer viernes de diciembre (18-dic-2026) y la fecha de roll no la verifiqué."},
-    {"concepto": "Sesión usada", "valor": "Día de operación CME Globex del 25-nov, de 5:00 p. m. CDMX del 24-nov (6:00 p. m. ET) a 4:00 p. m. CDMX del 25-nov (5:00 p. m. ET). No coincide con el día calendario 00:00-23:59 CDMX."},
-    {"concepto": "Apertura (sesión 25-nov)", "valor": "26,281.75 (CME Group)"},
-    {"concepto": "Máximo", "valor": "26,351.75 (CME Group)"},
-    {"concepto": "Mínimo", "valor": "25,027.00 (CME Group)"},
-    {"concepto": "Cierre (última operación, 4:00 p. m. CDMX)", "valor": "25,999.25 (CME Group; el precio oficial de liquidación no apareció)"},
-    {"concepto": "Variación de la sesión", "valor": "-276.50 (-1.05 %) (CME Group)"},
-    {"concepto": "Cierre previo (calculado)", "valor": "26,275.75 (25,999.25 + 276.50; coincide con NQZ6 (25,443.00 + 832.75) en otra página de CME)"},
-    {"concepto": "Precio actual, 6:00 a. m. CDMX (7:00 a. m. ET)", "valor": "No disponible (probé: CME Group, TradingEconomics, PreMarket Daily, Reuters vía Investing). Reportan futuros de Nasdaq-100 ≈+0.3 %; sobre 25,999.25 equivale a ≈26,077, referencia calculada y no verificada"},
-    {"concepto": "Variación vs cierre previo", "valor": "≈+0.3 % (reportada, sin cifra exacta; TradingEconomics)"},
-    {"concepto": "Nota de fuente", "valor": "Las cifras de CME salen de la página de cotizaciones (actualizada 25-nov, 4:30 p. m. CT); al abrirla de forma directa no cargó la tabla, así que tomé los valores de su vista previa en búsqueda. El rango del día fue de ≈1,325 puntos (≈5.1 %)."}
+    {"concepto": "Contrato", "valor": "MNQZ6 (diciembre 2026), el de mayor volumen (≈1.34 millones frente a 3,865 de marzo 2027). Último día de negociación: 18-dic-2026; el roll suele hacerse la semana previa (≈10-11 dic, no verificado). Las cotizaciones del NQ valen para el MNQ en puntos."},
+    {"concepto": "Sesión", "valor": "Globex de 24 h (dom 6:00 p. m. a vie 5:00 p. m. ET). El jueves 26 CME no publicó liquidación ni fecha de operación propia: los futuros pararon a la 1:00 p. m. ET y reabrieron a las 6:00 p. m. ET."},
+    {"concepto": "Liquidación mié 25 (base del % de hoy)", "valor": "26,100.25 (CME, MNQZ6)"},
+    {"concepto": "Mié 25, Globex (NQ)", "valor": "Máx 26,350.75; mín 25,027.50; último 26,013 (-1.00 %); apertura ≈ máximo (aprox.). Fuente proptraderz; el último precio difiere de la liquidación en ≈87 puntos."},
+    {"concepto": "AYER jue 26: apertura, máximo, mínimo y cierre", "valor": "No disponible (probé: CME, Investing, proptraderz). Sin liquidación; referencias: ≈26,220-26,280 a media mañana y 26,571 a las 7:01 p. m. ET (+1.8 %)."},
+    {"concepto": "Sesión CME en curso (fecha vie 27), jue 11:03 p. m. ET", "valor": "Apertura 26,240.50; máx 26,760.50; mín 25,996.75; último 26,732.00 (+631.75, +2.42 %). Fuente CME; no es el OHLC del jueves."},
+    {"concepto": "Vie 27, 5:55 a. m. ET (último dato verificado)", "valor": "26,755 (+2.5 %). Investing.com NQZ26; +2.51 % calculado contra 26,100.25."},
+    {"concepto": "Vie 27, 2:13 a. m. ET", "valor": "+645.75 puntos (+2.47 %) (Reuters)"},
+    {"concepto": "Precio exacto a las 7:00 a. m. ET", "valor": "No disponible; el dato más cercano es el de las 5:55 a. m. ET."},
+    {"concepto": "Máximo reciente del NQ", "valor": "31,432.25 (octubre)"},
+    {"concepto": "Mínimo de la semana", "valor": "24,976.50"}
   ],
   "escenarios": [
-    {"tipo": "Alcista", "texto": "Se sostiene sobre 25,999 (cierre de ayer) y supera 26,352 (máximo de ayer); zonas siguientes: ≈26,800 y ≈27,000 (resistencias citadas por XTB). Lo apoyaría: rendimiento a 10 años por debajo de 4.9 %, DXY estable o a la baja, rebote en Nvidia y chips."},
-    {"tipo": "Bajista", "texto": "Pierde 25,999 y retoma el mínimo de ayer (25,027) o la zona de 25,000. Lo apoyaría: 10 años hacia 5 %, DXY sobre 104, noticias de IA o aranceles, ventas por el PCE caliente."},
-    {"tipo": "Neutral", "texto": "Rango entre 25,999 y 26,352 con poco volumen hasta la pausa de las 12:00 p. m. CDMX. Lo apoyaría: sin datos de EE. UU., liquidez delgada, rebote técnico sin continuidad."}
+    {"tipo": "Alcista", "texto": "El rebote se sostiene por encima de 26,350-26,400 (antes resistencia) y avanza hacia 26,800-27,000. Más arriba: 27,050, 27,137 (máximo del lunes) y 27,300. Favorecen: DXY estable o menor, 10 años bajo 4.85 % y Nvidia/IA firmes."},
+    {"tipo": "Bajista", "texto": "El rebote resulta solo técnico y pierde 26,350-26,400, luego 26,000-26,146 y 25,510-25,560; romper 24,976.50 cambiaría el carácter del mercado. Presionarían: DXY sobre 104.0-104.53, 10 años cerca de 4.9-5.0 %, más restricciones a chips, tensión en Medio Oriente o aranceles."},
+    {"tipo": "Neutral", "texto": "Rango 26,350-27,000 con poco volumen hasta el cierre anticipado."}
   ],
   "agenda": [
-    {"hora": "Hoy hasta 12:00 p. m. CDMX (1:00 p. m. ET)", "evento": "Futuros de acciones de CME operan con liquidez baja; no hay apertura de Nueva York ni datos USD de impacto medio o alto"},
-    {"hora": "12:00 p. m. CDMX (1:00 p. m. ET)", "evento": "Los futuros de acciones se detienen"},
-    {"hora": "5:00 p. m. CDMX (6:00 p. m. ET)", "evento": "Reapertura de futuros para la sesión acortada del viernes"},
-    {"hora": "Viernes 27-nov, 12:00 p. m. CDMX (1:00 p. m. ET)", "evento": "Cierre de acciones en sesión acortada; bonos a la 1:00 p. m. CDMX (2:00 p. m. ET)"},
-    {"hora": "29-nov", "evento": "Reunión de la OPEP+ sobre producción de 2027"},
-    {"hora": "8-9 dic", "evento": "FOMC (alza de 25 pb casi descontada)"},
-    {"hora": "5-ene-2027", "evento": "Cierre de comentarios sobre los aranceles propuestos"}
+    {"hora": "8:30 a. m. CDMX (9:30 a. m. ET)", "evento": "Apertura de acciones (sesión acortada)"},
+    {"hora": "12:00 p. m. CDMX (1:00 p. m. ET)", "evento": "Cierre de acciones"},
+    {"hora": "1:00 p. m. CDMX (2:00 p. m. ET)", "evento": "Cierre de bonos"},
+    {"hora": "1-dic", "evento": "Comparecencia de Jensen Huang ante comités de la Cámara"},
+    {"hora": "4-dic", "evento": "Reporte de empleo de noviembre"},
+    {"hora": "8-9 dic", "evento": "Reunión de la Fed (decisión el 9-dic; alza casi descontada)"}
   ],
-  "conclusion": "Ayer el MNQ cayó hasta 25,027 y recuperó para cerrar en 25,999.25 (-1.05 %) tras un PCE caliente, aranceles y una venta de IA; hoy no hay sesión regular de Nueva York y los futuros paran a las 12:00 p. m. CDMX (1:00 p. m. ET). Niveles a vigilar: 25,027 (mínimo de ayer), 25,999 (cierre), 26,352 (máximo de ayer) y 26,800-27,000. Qué observar: rendimiento a 10 años (≈4.85 %, 5 % como referencia psicológica), DXY alrededor de 103.5-104.0 y titulares de Nvidia, IA y aranceles. Con liquidez baja y sin datos, conviene esperar confirmación del precio antes de actuar; ningún nivel de este reporte es una señal de compra o venta, y no hay promesa de resultados. El riesgo del día es de liquidez: en días festivos con poco volumen, los movimientos pueden exagerarse en cualquier dirección.",
+  "conclusion": "Ayer no hubo sesión de acciones ni datos de EE. UU.; el dólar quedó plano y el MNQ subió ≈2.4 % en Globex por un rebote tecnológico global. Hoy la sesión de Nueva York es corta (cierra 12:00 p. m. CDMX) y con poca liquidez. Vigilar: 26,350-26,400 como soporte inmediato; 26,800-27,000 como zona de resistencia; 26,000 y 24,976.50 como pisos; DXY frente a 104.0 y el 10 años frente a 4.9 %. Esperar confirmación del precio antes de cualquier decisión; no hay garantías de resultado. Notas de datos: sin OHLC del jueves para DXY ni MNQ (sin liquidación CME); el cierre del 10 años del miércoles y las lecturas de hoy difieren entre fuentes; varias fuentes se leyeron solo por resumen del buscador; el calendario de ForexFactory/Investing.com no se pudo abrir.",
   "fuentes": [
-    {"titulo": "TradingEconomics: dólar (DXY)", "url": "https://tradingeconomics.com/united-states/currency"},
-    {"titulo": "TradingEconomics: mercado de EE. UU.", "url": "https://tradingeconomics.com/united-states/stock-market"},
-    {"titulo": "Getleveraged: Financial Market Review 26.11.26", "url": "https://getleveraged.com/reviews/26-11-26/"},
-    {"titulo": "PreMarket Daily: PCE hits 3.8%", "url": "https://premarketdaily.com/2026/11/26/pce-hits-3-8-while-global-markets-rally-on-thanksgiving/"},
-    {"titulo": "CME Group: Micro E-mini Nasdaq-100 (MNQ)", "url": "https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.html"},
-    {"titulo": "CME Group: E-mini Nasdaq-100, especificaciones", "url": "https://www.cmegroup.com/markets/equities/nasdaq/e-mini-nasdaq-100.contractSpecs.html"},
-    {"titulo": "ABC News: cómo cerraron los índices el 25-nov", "url": "https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-wednesday-11252026-138453529"},
-    {"titulo": "Reuters vía Investing: Nasdaq slides 4%", "url": "https://ca.investing.com/news/economy-news/nasdaq-slides-4-as-ai-selloff-tariff-proposals-rattle-wall-st-4981250"},
-    {"titulo": "Saxo: Market Quick Take 26-nov", "url": "https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---nasdaq-briefly-hits-bear-market-territory-before-paring-losses---26-november-2026-26112026"},
-    {"titulo": "Investing.com: Dollar steady after strong PCE data", "url": "https://ca.investing.com/news/forex-news/dollar-steady-after-strong-pce-data-won-firms-as-bok-hikes-interest-rates-4982145"},
-    {"titulo": "FXStreet: DXY flatlines below 104.00", "url": "https://www.fxstreet.com/news/us-dollar-index-dxy-flatlines-just-below-10400-in-thanksgiving-lull-202611260932"},
-    {"titulo": "CNBC: rendimiento del 10 años", "url": "https://www.cnbc.com/amp/2026/11/25/treasury-yields-bonds-inflation.html"},
-    {"titulo": "StockMarketWatch: rendimiento del 10 años (par yield del Tesoro)", "url": "https://stockmarketwatch.com/bonds/10-year-treasury-yield"},
-    {"titulo": "Motley Fool: Stock Market Today, 25-nov", "url": "https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-today-dow-erases-1-100-point-loss-as-wall-street-stages-dramatic-late-day-comeback/"},
-    {"titulo": "Longbridge: Morning Brief", "url": "https://longbridge.com/en/topics/45393942"},
-    {"titulo": "XTB: Chart of the day US100", "url": "https://xtb.com/cy/market-analysis/news-and-research/chart-of-the-day-us100-loses-almost-2-what-s-next-for-nasdaq-100-25-11-2026"},
-    {"titulo": "FinanceCalendar: horarios de futuros en Acción de Gracias", "url": "https://www.financecalendar.com/?p=2571"},
-    {"titulo": "QuantVPS: horarios festivos de CME 2026", "url": "https://www.quantvps.com/blog/cme-holiday-schedule"}
+    {"titulo": "Reuters (KFGO): Wall St futures surge as investors return from holiday", "url": "https://kfgo.com/2026/11/27/wall-st-futures-surge-as-investors-return-from-holiday/"},
+    {"titulo": "Investing.com: Wall street futures surge toward best week in months", "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-rise-in-holidaythinned-trade-tech-rebound-in-focus-5052775"},
+    {"titulo": "Investing.com: AI chip curbs, Musk giveaway and oil risks", "url": "https://www.investing.com/news/economy-news/ai-chip-curbs-musks-giveaway-and-oil-risks--whats-moving-markets-5053039"},
+    {"titulo": "The Weekend Spread: The Close, Wednesday, November 25, 2026", "url": "https://theweekendspread.substack.com/p/the-close-wednesday-november-25-2026"},
+    {"titulo": "CNBC/Reuters: Dollar lingers near 22-month peak", "url": "https://www.cnbc.com/2026/11/27/dollar-ai-forex-euro-currency.html"},
+    {"titulo": "FXStreet: Forex Today, US Dollar finds footing as Japan CPI can rock the Yen", "url": "https://www.fxstreet.com/news/forex-today-us-dollar-finds-footing-as-japan-cpi-can-rock-the-yen-202611262124"},
+    {"titulo": "The Library: Forex Day Open Briefing, Nov 27", "url": "https://thelibraryestate.com/forex-day-open-briefing-dollar-steady-as-markets-await-tokyo-inflation-data-nov-27-2026/"},
+    {"titulo": "Investing.com: US Dollar Index historical data", "url": "https://www.investing.com/indices/usdollar-historical-data"},
+    {"titulo": "Gate/ChainCatcher: DXY close Nov 25", "url": "https://www.chaincatcher.com/en/article/2308055"},
+    {"titulo": "CappNotes: Closing Look, Nov 25", "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"},
+    {"titulo": "IC Markets: General Market Analysis, 25 Nov 2026", "url": "https://www.ic.com/blog/general-market-analysis-25-november-2026-ic/"},
+    {"titulo": "CME Group: Micro E-mini Nasdaq-100 quotes", "url": "https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.html"},
+    {"titulo": "CME Group: E-mini Nasdaq-100 calendar", "url": "https://www.cmegroup.com/markets/equities/nasdaq/e-mini-nasdaq-100.calendar.html"},
+    {"titulo": "CME Group: Holiday and trading hours", "url": "https://www.cmegroup.com/trading-hours.html"},
+    {"titulo": "LP Futures: Thanksgiving 2026 futures hours", "url": "https://lpfutures.com/thanksgiving-2026-futures-trading-hours/"},
+    {"titulo": "proptraderz: NQ daily trade plan, Nov 26-27", "url": "https://www.proptraderz.com/nq-daily-trade-plan-2026-11-26-27/"},
+    {"titulo": "OneUpTrader: NQ key levels, Nov-Dec 2026", "url": "https://blog.oneuptrader.com/analysis/technical-analysis/nq-futures-key-levels-trades-nov-dec-2026/"},
+    {"titulo": "Concept Trader: Market Snapshot, Nov 27", "url": "https://prop.theconcepttrader.com/market-snapshot-november-27th-2026/"},
+    {"titulo": "AP (ADN): Fed minutes, higher interest rates needed in December", "url": "https://www.adn.com/business-economy/2026/11/18/fed-minutes-higher-interest-rates-needed-in-december-as-inflation-worries-mount/"},
+    {"titulo": "BigGo Finance: Wall Street goes dark for Thanksgiving", "url": "https://finance.biggo.com/news/bef38756-5740-4079-8784-f2d501914c9b"}
   ],
   "aviso": "Reporte informativo; no constituye asesoría financiera.",
   "mapa": {
     "titulo": "DXY: niveles a vigilar",
-    "actualizado": "Precio de las 6:00 a. m. CDMX (7:00 a. m. ET)",
-    "precio": {"valor": 103.78, "etiqueta": "Ahora ≈103,78"},
+    "actualizado": "Precio de las 7:00 a. m. ET (6:00 a. m. CDMX)",
+    "precio": {"valor": 103.745, "etiqueta": "Ahora ≈103,745"},
     "niveles": [
-      {"valor": 104.57, "etiqueta": "104,57 Máximo de 19-20 meses (inicio de semana)"},
-      {"valor": 104.0, "etiqueta": "104,00 Máximo de ayer (aprox.)"},
-      {"valor": 103.7, "etiqueta": "103,70 Cierre de ayer"},
-      {"valor": 103.5, "etiqueta": "103,50 Mínimo de ayer (aprox.)"}
+      {"valor": 104.53, "valor2": 104.0, "etiqueta": "104,00–104,53 Zona de presión (máx. lunes 104,53)"},
+      {"valor": 103.81, "etiqueta": "103,81 Apertura de Asia de hoy"},
+      {"valor": 103.67, "etiqueta": "103,67 Cierre del miércoles"},
+      {"valor": 103.55, "etiqueta": "103,55 Mínimo del miércoles"}
     ],
-    "flechas": [],
+    "flechas": [
+      {"dir": "arriba", "hasta": 104.53, "texto": "Si el DXY sube sobre 104,0–104,53, presionaría al Nasdaq (según el reporte)"}
+    ],
     "nota": "Dibujo de niveles tomados del reporte; no es un pronóstico ni una señal. Las flechas muestran hacia dónde apuntan los niveles, no su probabilidad."
   }
 }
